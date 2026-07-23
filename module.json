@@ -1,0 +1,2623 @@
+{
+  "MODULES": {
+    "m1": {
+      "nr": "1",
+      "titel": "Interdisziplinäre Kompetenz",
+      "kuerzel": "M1",
+      "semester": 1,
+      "typ": "PM",
+      "koordination": "Prof. Dr. R. Nägele",
+      "ects": 5,
+      "aufwand": "150 h",
+      "sws": 5,
+      "kontaktzeit": "75 h",
+      "selbststudium": "75 h",
+      "voraussetzung": "keine",
+      "verwendbarkeit": {
+        "vorkenntnis": "Fördert den Erfolg in allen anderen Modulen",
+        "kombination": "keine"
+      },
+      "pruefung": {
+        "modulpruefung": "",
+        "modulteilpruefung": "B, SP"
+      },
+      "endnote": "ECTS-gewichtetes, arithmetisches Mittel der benoteten Modulteilprüfungen",
+      "lernziele": [
+        "können im Team mit anderen zusammenarbeiten",
+        "kommunizieren effektiv und zielorientiert",
+        "gehen planvoll an Fragestellungen des Maschinenbaus und der mechatronischen Systeme heran",
+        "kennen die Anforderungen an technische Berichte",
+        "können Literaturquellen recherchieren und entsprechend zitieren",
+        "Können ihr Vorgehen und ihre Ergebnisse mündlich und schriftlich präsentieren",
+        "verfassen strukturierte, gut lesbare technische Berichte",
+        "können eine Anlage, einen Prozess analysieren nach Wirkzusammenhängen",
+        "sprechen fachkundig mit anderen über eine Anlage und deren Aktoren und Sensoren",
+        "ordnen die Konzepte der Informatik in den Rahmen der Automatisierung ein",
+        "setzen Basis-Datentypen passend ein",
+        "leiten aus einer schriftlichen Definition eine binäre logische Verknüpfung her",
+        "können mit dem Programmiersystem umgehen",
+        "können einfache Programmierungen durchführen",
+        "testen systematisch das Verhalten eines Programms",
+        "können eine sequentielle Aufgabendefinition in einen Programmcode übertragen",
+        "programmieren nachvollziehbar mit Kommentaren und sprechenden Variablennamen",
+        "setzen die vordefinierten Funktionsbaustein-Prototypen zielorientiert ein",
+        "können sich vorstellen, wie das SPS-Programm in Zyklen abläuft",
+        "können einfache Teile im CAD-System zeichnen und mit Rapid-Prototyping herstellen",
+        "können im Team eine interdisziplinäre Aufgabenstellung zum Bau eines mechatronischen Modell-Systems kreativ angehen und zum Ziel führen",
+        "integrieren mechanische, elektrische, künstlerische und wirtschaftliche Aspekte zu einem Gesamtsystem",
+        "schließen Sensoren/Aktoren mit der notwendigen Vorsicht elektronisch an die Ein/Ausgänge eines Microcontrollers an",
+        "können das Verhalten eines mechatronischen Systems aus Elektronik, Mechanik und Software systematisch testen und Fehler beheben"
+      ],
+      "kompetenzReihenfolge": {
+        "fach": 3,
+        "methode": 2,
+        "sozial": 1
+      },
+      "methodischeKompetenzen": "siehe Fachliche Kompetenzen! Fachliche und methodische Kompetenzen sind untrennbar verbunden.",
+      "personaleKompetenzen": [
+        "können im Team mit anderen zusammenarbeiten",
+        "kommunizieren effektiv und zielorientiert",
+        "verfassen strukturierte, gut lesbare technische Berichte",
+        "können im Team eine interdisziplinäre Aufgabenstellung zum Bau eines mechatronischen Modell-Systems kreativ angehen und zum Ziel führen",
+        "sprechen fachkundig mit anderen über eine Anlage und deren Aktoren und Sensoren"
+      ],
+      "teilmodule": [
+        {
+          "name": "Verfassen technischer Berichte",
+          "lehrende": "Prof. Dr. A. Lohmberg",
+          "art": "o",
+          "sws": 1,
+          "ects": 1,
+          "inhalt": [
+            "Einführung in die Literaturrecherche",
+            "Vorgehen zum Erstellen technischer Berichte",
+            "Formale Anforderungen an technische Berichte",
+            "Bestandteile von technischen Berichten",
+            "Zitieren von Text- und Bildquellen",
+            "Quellenangabe",
+            "Erstellen und Verwenden einer Formatvorlage"
+          ]
+        },
+        {
+          "name": "Mechatronik und Programmierung",
+          "lehrende": "Prof. Dr. R. Nägele",
+          "art": "V",
+          "sws": 2,
+          "ects": 1,
+          "inhalt": [
+            "KAPITEL 1 Grundsätzliche Struktur eines Control System",
+            "1.1 Prozess/System mit Aktoren und Sensoren",
+            "1.2 Komplettes Control System",
+            "1.3 Typische Signale",
+            "KAPITEL 2 Steuerungstechnik – Speicherprogrammierbare Steuerungen (SPS)",
+            "2.1 Die fünf Sprachen der IEC-Norm 61131",
+            "2.2 Grundlegendes unabhängig von der jeweiligen SPS-Sprache",
+            "2.3 Einführende Beispiele: Nur binäre Signale, nur Schaltnetze",
+            "2.4 Speicherfunktion durch Schritte in AS",
+            "2.5 Vordefinierte Funktionsbausteine: Trigger, Timer, Zähler",
+            "KAPITEL 3 Low-cost mechatronics",
+            "3.1 Loading a PLC program into a Raspberry Pi Zero W",
+            "3.2 Electronic connections to sensors and actuators"
+          ]
+        },
+        {
+          "name": "Mechatronisches Laborprojekt",
+          "lehrende": "Prof. Dr. R. Nägele",
+          "art": "Ü",
+          "sws": 2,
+          "ects": 3,
+          "inhalt": [
+            "1. Konzeption des Aufbaus im Team (Gruppen à 4 Studierende)",
+            "1.1 Design, mechanisch und künstlerisch",
+            "1.2 Aufteilung in Baugruppen, Festlegung der Materialien und Herstellungsverfahren",
+            "1.3 Spezifikation des Verhaltens",
+            "1.4 Aufgabenaufteilung und Projektplanung",
+            "2. Realisierung",
+            "2.1 Herstellung der Teile, handwerklich und mit Rapid Prototyping",
+            "2.2 Montage",
+            "2.3 Programmierung",
+            "2.4 Anschluss des Microcontrollers",
+            "3. Inbetriebnahme des mechatronischen Systems",
+            "3.1 Test und Fehlerbehebung in Baugruppen und im Gesamtsystem",
+            "3.2 Präsentation des Verhaltens und der Besonderheiten des Designs",
+            "3.3 Jury-Bewertung und Preisverleihung"
+          ]
+        }
+      ],
+      "literatur": [
+        "Hering, H: Technische und naturwissenschaftliche Berichte: Verständlich gliedern, gut gestalten, überzeugend vortragen. 9. Aufl., Vieweg, 2023",
+        "Seitz, M.: Speicherprogrammierbare Steuerungen im Industrial IoT, Hanser Fachbuch, 6. Aufl. 2024, ISBN 978-3-446-48243-2",
+        "John; Tiegelkamp: SPS-Programmierung mit IEC 61131-3, 4. Aufl., Springer, 2009, ISBN 978-3-642-00268-7",
+        "Pusch, K.: Grundkurs IEC 1131, Vogel Verlag, 1999, ISBN 3-8023-1807-2",
+        "Programmiersystem Codesys 3.5, Online-Hilfen",
+        "Vorlesungsskripte und Materialien auf Moodle"
+      ]
+    },
+    "m2": {
+      "nr": "2",
+      "titel": "Mathematik 1",
+      "kuerzel": "M2",
+      "semester": 1,
+      "typ": "PM",
+      "koordination": "Prof. Dr. T. Hellmuth",
+      "ects": 5,
+      "aufwand": "150 h",
+      "sws": 6,
+      "kontaktzeit": "90 h",
+      "selbststudium": "60 h",
+      "voraussetzung": "—",
+      "verwendbarkeit": {
+        "vorkenntnis": "Mathematik 2 & 3, sowie alle naturwissenschaftlichen, technischen Module",
+        "kombination": "—"
+      },
+      "pruefung": {
+        "modulpruefung": "K90",
+        "modulteilpruefung": ""
+      },
+      "endnote": "Note der benoteten Modul(teil)prüfung",
+      "lernziele": [
+        "kennen Fachbegriffe, Fakten, Konzepte und Theorien der Höheren Mathematik",
+        "kennen Beispiele und Anwendungen aus der Höheren Mathematik",
+        "können mathematische Methoden und Technologien anwenden",
+        "können gelerntes Wissen und Prinzipien der Mathematik in der Praxis anwenden",
+        "können physikalische Probleme in mathematische Gleichungen modellieren und diese lösen",
+        "sind in der Lage, geeignete Methoden zur Lösung von Problemen selbständig auszuwählen",
+        "können sich neues Wissen selbstständig erschließen",
+        "können in Teams arbeiten"
+      ],
+      "kompetenzReihenfolge": {
+        "fach": 1,
+        "methode": 2,
+        "sozial": 3
+      },
+      "teilmodule": [
+        {
+          "name": "Mathematik 1",
+          "lehrende": "Prof. Dr. T. Hellmuth / B. Rose",
+          "art": "V, Ü",
+          "sws": 6,
+          "ects": 5,
+          "inhalt": [
+            "Lineare Algebra: Grundbegriffe und Anwendungen",
+            "Differentialrechnung: Ableitungsregeln, Kurvendiskussion, Extremwertaufgaben",
+            "Integralrechnung: Integrationsregeln und –methoden, Flächenberechnung"
+          ]
+        }
+      ],
+      "literatur": [
+        "Papula, Lothar: Mathematik für Ingenieure und Naturwissenschaftler: Vieweg-Teubner"
+      ]
+    },
+    "m3": {
+      "nr": "3",
+      "titel": "Werkstoffkunde und Fertigungsverfahren 1",
+      "kuerzel": "M3",
+      "semester": 1,
+      "typ": "PM",
+      "koordination": "Prof. Dr.-Ing. V. Merklinger",
+      "ects": 5,
+      "aufwand": "150 h",
+      "sws": 6,
+      "kontaktzeit": "90 h",
+      "selbststudium": "60 h",
+      "voraussetzung": "—",
+      "verwendbarkeit": {
+        "vorkenntnis": "Werkstoffkunde und Fertigungsverfahren 2 & 3, Konstruktionslehremodule",
+        "kombination": "Konstruktionslehre 1"
+      },
+      "pruefung": {
+        "modulpruefung": "K90",
+        "modulteilpruefung": ""
+      },
+      "endnote": "Note der benoteten Modul(teil)prüfung",
+      "lernziele": [
+        "verfügen über Grundlagenwissen zur Werkstoff-Fertigungstechnik mit einzelnen Schwerpunktsetzungen",
+        "verstehen das Verhalten von Werkstoffen im Einsatz, in der Herstellung und in der Verarbeitung",
+        "können mit Werkstoffkennwerten umgehen und haben technisches Grundwissen zur Auswahl geeigneter Fertigungsverfahren und zu deren Einsatzplanung unter Berücksichtigung technologischer, ökonomischer und ökologischer Aspekte"
+      ],
+      "kompetenzReihenfolge": {
+        "fach": 1,
+        "methode": 2,
+        "sozial": 3
+      },
+      "teilmodule": [
+        {
+          "name": "Werkstoffkunde und Fertigungsverfahren 1",
+          "lehrende": "Prof. Dr.-Ing. V. Merklinger / Prof. Dr.-Ing. T. Deißer / W. Sterzl",
+          "art": "V",
+          "sws": 6,
+          "ects": 5,
+          "inhalt": [
+            "Struktur und Eigenschaften der Metalle, Atome, Moleküle, Bindungsformen, Kristallstruktur, Verformung, Kristallisation thermisch aktivierte Vorgänge, Legierungen, Struktur der Legierungen System Eisen-Kohlenstoff, Eisenwerkstoffe, Wärmebehandlung der Eisenwerkstoffe",
+            "Urformen, Gusstechnik, Sintern, Umformen, Trennen, Fügen, Wirtschaftlichkeitsbetrachtungen",
+            "Einführung in die Kunststofftechnik, Kunststofftypen: chemische Grundlagen, Eigenschaften und Anwendung; Kunststoffverarbeitung zu Bauteilen (inkl. Recyclingaspekte, faserverstärkte Kunststoffe)",
+            "Produkt- und Prozessmerkmale von Fertigungsverfahren und –systemen: Statische und kinematische Prozessverhältnisse, Anlagen und Werkzeuge, Werkstoff- und Bauteileigenschaften, Qualitätssicherung",
+            "Sonderverfahren, neuere Entwicklungen, Rapid Prototyping"
+          ]
+        }
+      ],
+      "literatur": [
+        "Seidel, Wolfgang; Hahne, Frank.: Werkstofftechnik, 9. Aufl., Hanser-Verlag, München, 2009",
+        "Bargel, Hans-Jürgen., Schulze, Günter: Werkstoffkunde, 10. Aufl., Springer-Verlag, Berlin, 2008",
+        "Kaiser, Wolfgang.: Kunststoffchemie für Ingenieure, Hanser Verlag, München, 2011",
+        "Awiszus, Birgit, Bast, Jürgen, Dürr, Holger: „Grundlagen der Fertigungstechnik“, 4. Auflage, Hanser Fachbuchverlag, München, 2009",
+        "Fritz, Herbert; Schulze, Günter: „Fertigungstechnik“, 9. Auflage. Springer Verlag, Berlin, 2010"
+      ]
+    },
+    "m4": {
+      "nr": "4",
+      "titel": "Technische Mechanik 1",
+      "kuerzel": "M4",
+      "semester": 1,
+      "typ": "PM",
+      "koordination": "Prof. Dr. L. Eicher",
+      "ects": 5,
+      "aufwand": "150 h",
+      "sws": 4,
+      "kontaktzeit": "60 h",
+      "selbststudium": "90 h",
+      "voraussetzung": "—",
+      "verwendbarkeit": {
+        "vorkenntnis": "Technische Mechanik 2 & 3, Konstruktionslehre 2 bis 4",
+        "kombination": "Konstruktionslehre 1"
+      },
+      "pruefung": {
+        "modulpruefung": "K90",
+        "modulteilpruefung": ""
+      },
+      "endnote": "Note der benoteten Modul(teil)prüfung",
+      "lernziele": [
+        "kennen die Grundlagen, Methoden und Rechenwege der Statik und können diese auf Maschinen(teile) anwenden.",
+        "kennen die Grundlagen der Kräfte- und Momentenberechnung, die an Bauteilen des Maschinenbaus wirksam sind.",
+        "können bei der Kräfte- und Momentenberechnung die Gesamtaufgabe abstrahieren, in Teilschritte unterteilen und diese durchführen."
+      ],
+      "kompetenzReihenfolge": {
+        "fach": 1,
+        "methode": 2,
+        "sozial": 3
+      },
+      "teilmodule": [
+        {
+          "name": "Technische Mechanik 1",
+          "lehrende": "Prof. Dr. L. Eicher",
+          "art": "V, Ü",
+          "sws": 4,
+          "ects": 5,
+          "inhalt": [
+            "Rechenregeln für Kräfte und Momente",
+            "Berechnung von Schwerpunkten, Flächenmittelpunkten und Trägheitsmomenten",
+            "Bestimmung von Lagerkräften",
+            "Zerlegung der Gesamtbauteile und Berechnung der Schnittkräfte- und Schnittmomenten zwischen den Teilbauteilen",
+            "Fachwerksberechnung",
+            "Ermittlung der inneren Kräfte und Momente in balkenförmigen Teilbauteilen",
+            "Reibung"
+          ]
+        }
+      ],
+      "literatur": [
+        "Gross, Hauger, Schröder, Wall: Technische Mechanik 1, Springer-Verlag",
+        "Hibbeler: Technische Mechanik 1, Pearson-Verlag",
+        "Steibler: Freischneiden in der Festigkeitslehre, De Gruyter-Verlag Verlag 2017"
+      ]
+    },
+    "m5": {
+      "nr": "5",
+      "titel": "Konstruktionslehre und Maschinenelemente 1",
+      "kuerzel": "M5",
+      "semester": 1,
+      "typ": "PM",
+      "koordination": "Prof. J. Bauer",
+      "ects": 5,
+      "aufwand": "150 h",
+      "sws": 4,
+      "kontaktzeit": "60 h",
+      "selbststudium": "90 h",
+      "voraussetzung": "—",
+      "verwendbarkeit": {
+        "vorkenntnis": "—",
+        "kombination": "Technische Mechanik 1, Werkstoffkunde 1"
+      },
+      "pruefung": {
+        "modulpruefung": "K90",
+        "modulteilpruefung": ""
+      },
+      "endnote": "Note der benoteten Modul(teil)prüfung",
+      "lernziele": [
+        "verfügen über ein solides Grundwissen auf dem Gebiet der Konstruktionslehre, das es ihnen erlaubt, sich schnell in die Thematik vertiefend einzuarbeiten",
+        "kennen Fachbegriffe und können gelerntes Wissen und Prinzipien in der Praxis anwenden",
+        "haben erstes Basiswissen zur Konstruktionsmethodik erworben",
+        "kennen grundlegende Maschinenelemente und Normteile sowie deren Anwendung und Einsatzmöglichkeiten unter Berücksichtigung der Aufgabenstellung",
+        "kennen und beherrschen u. a. die fertigungsgerechten, werkstoffgerechten, belastungsgerechten Gestaltungsrichtlinien von Bauteilen und sind in der Lage, diese anzuwenden",
+        "verfügen über die Kompetenz, technische Zeichnungen zu verstehen, normgerecht zu erstellen und im Rahmen der technischen Kommunikation richtig einzusetzen und anzuwenden",
+        "kennen viele Anwendungsfälle und können ihre Kenntnisse auf diese anwenden",
+        "können ausgewählte Maschinenelemente auslegen"
+      ],
+      "kompetenzReihenfolge": {
+        "fach": 1,
+        "methode": 2,
+        "sozial": 3
+      },
+      "teilmodule": [
+        {
+          "name": "Konstruktionslehre und Maschinenelemente 1",
+          "lehrende": "Prof. J. Bauer",
+          "art": "V, Ü",
+          "sws": 4,
+          "ects": 5,
+          "inhalt": [
+            "Technisches Zeichnen, Darstellende Geometrie, Technische Kommunikation, Normgerechte Zeichnungserstellung, Zeichnungsarten, Zeichnungsableitung, Normen, Toleranzen und Passungen",
+            "Erstellung von Baugruppenzeichnungen und Stücklisten",
+            "Basiswissen zur Konstruktionsmethodik ausgehend von der Idee zum Technischen Bauteil",
+            "Berücksichtigung der Werkstofftechnischen / Fertigungstechnischen Anforderungen",
+            "Normteile und Maschinenelemente mit Darstellung in technischen Zeichnungen",
+            "Baugruppenfunktionsanalysen",
+            "Einführung in die Auslegung von Maschinenelemente"
+          ]
+        }
+      ],
+      "literatur": [
+        "Skript",
+        "Tabellenbuch Metall",
+        "Hoischen: Technisches Zeichnen"
+      ]
+    },
+    "m6": {
+      "nr": "6",
+      "titel": "Konstruktionsübung 1 und CAD",
+      "kuerzel": "M6",
+      "semester": 1,
+      "typ": "PM",
+      "koordination": "Prof. J. Bauer",
+      "ects": 5,
+      "aufwand": "150 h",
+      "sws": 4,
+      "kontaktzeit": "60 h",
+      "selbststudium": "90 h",
+      "voraussetzung": "—",
+      "verwendbarkeit": {
+        "vorkenntnis": "—",
+        "kombination": "Technische Mechanik 1, Werkstoffkunde 1, Konstruktionslehre und Maschinenelemente 1"
+      },
+      "pruefung": {
+        "modulpruefung": "T",
+        "modulteilpruefung": ""
+      },
+      "endnote": "Unbenotet",
+      "lernziele": [
+        "beherrschen die Modellierung von 3D-Modellen und die Ableitung von technischen Zeichnungen in einem CAD-Programm",
+        "können Einzelteile in Baugruppen zusammenführen und Stücklisten erstellen (CAD)",
+        "wenden die Grundlagen der Model-Based-Definition (Zeichnungsloses Arbeiten) an",
+        "führen einfache Analysen (Bewegungsabläufe, Toleranzanalyse) im CAD an"
+      ],
+      "teilmodule": [
+        {
+          "name": "Konstruktionsübung 1 und CAD",
+          "lehrende": "Prof. J. Bauer",
+          "art": "Ü",
+          "sws": 4,
+          "ects": 5,
+          "inhalt": [
+            "Grundlagen des Computer Aided Design (CAD) (Erstellung von Bauteilen, Baugruppen und Zeichnungen im 3D und 2D)",
+            "Gestaltung von Bauteilen hinsichtlich Fertigungstechnik, Werkstofftechnik"
+          ]
+        }
+      ]
+    },
+    "m7": {
+      "nr": "7",
+      "titel": "Mathematik 2",
+      "kuerzel": "M7",
+      "semester": 2,
+      "typ": "PM",
+      "koordination": "Prof. Dr. R. Winkler",
+      "ects": 5,
+      "aufwand": "150 h",
+      "sws": 6,
+      "kontaktzeit": "90 h",
+      "selbststudium": "60 h",
+      "voraussetzung": "—",
+      "verwendbarkeit": {
+        "vorkenntnis": "Technische Mechanik 3, Regelungstechnik",
+        "kombination": "Technische Mechanik 2"
+      },
+      "pruefung": {
+        "modulpruefung": "K90",
+        "modulteilpruefung": ""
+      },
+      "endnote": "Note der benoteten Modul(teil)prüfung",
+      "lernziele": [
+        "kennen mathematische Fachbegriffe, Fakten, Konzepte und Theorien",
+        "können gelerntes Wissen und Prinzipien der Mathematik in der Praxis anwenden",
+        "kennen die Anwendungen, Methoden und Möglichkeiten von MATLAB",
+        "sind in der Lage, geeignete Methoden zur Lösung von Problemen selbständig auszuwählen",
+        "kennen viele Anwendungsfälle und können ihre Kenntnisse auf diese anwenden"
+      ],
+      "kompetenzReihenfolge": {
+        "fach": 1,
+        "methode": 2,
+        "sozial": 3
+      },
+      "teilmodule": [
+        {
+          "name": "Mathematik 2",
+          "lehrende": "Prof. Dr. R. Winkler / Prof. Dr. J. Weber",
+          "art": "V, Ü",
+          "sws": 6,
+          "ects": 5,
+          "inhalt": [
+            "Wiederholung wichtiger Kapitel aus Mathe 1",
+            "Komplexe Zahlen (Definition, Darstellungsarten, Rechenoperationen, Fundamentalsatz der Algebra)",
+            "Funktionen von mehreren Variablen (Partielle Ableitung, totales - Differential, implizites Differenzieren, Tangentialebene, Gradient, Extrema mit und ohne Randbedingungen, Ausgleichsrechnung, Zweifach- und Dreifachintegrale)",
+            "Gewöhnliche Differentialgleichungen (Einteilung, Lösungsmethoden, Anfangs- und Randwertprobleme, Anwendungsbeispiele, Methode der Laplace-Transformation)",
+            "Unendliche Reihen, Potenz- und Taylorreihen (Entwicklung und Integration)",
+            "Fourier-Reihen und Einführung in die Fourier-Transformation"
+          ]
+        }
+      ],
+      "literatur": [
+        "Skripte der lehrenden Professoren",
+        "Papula, Lothar: Mathematik für Ingenieure und Naturwissenschaftler; Vieweg-Teubner (Band 1, Band 2, Band 3 und Formelsammlung)",
+        "Harro Heuser: Gewöhnliche Differentialgleichungen; Teubner-Verlag",
+        "Arens; Hettlich; Karpfinger, Kockelhorn; Lichtenegger; Stachel: Mathematik; Spektrum Akademischer Verlag 2010",
+        "Meyberg; Vachenauer: Höhere Mathematik; Band 1 und 2; Springer"
+      ]
+    },
+    "m8": {
+      "nr": "8",
+      "titel": "Physik",
+      "kuerzel": "M8",
+      "semester": 2,
+      "typ": "PM",
+      "koordination": "Prof. Dr. C. Hettich",
+      "ects": 5,
+      "aufwand": "150 h",
+      "sws": 5,
+      "kontaktzeit": "75 h",
+      "selbststudium": "75 h",
+      "voraussetzung": "—",
+      "verwendbarkeit": {
+        "vorkenntnis": "Technische Mechanik 3",
+        "kombination": "Elektrotechnik"
+      },
+      "pruefung": {
+        "modulpruefung": "K90",
+        "modulteilpruefung": "SP"
+      },
+      "endnote": "Note der benoteten Modul(teil)prüfung",
+      "lernziele": [
+        "können physikalisch denken und die erworbenen Methoden auf ingenieurtechnische Bereich anwenden",
+        "sind geübt im Umgang mit Einheiten",
+        "können schnell Überschlagsrechnungen durchführen, auch über große Wertebereiche hinweg",
+        "können Bilanzierungen für beliebige (auch für näherungsweise gültige ) Erhaltungsgrößen durchführen. Insbesondere für Energie und Impuls. Die Übertragbarkeit auf Drehimpuls und Ladung ist bekannt",
+        "können schwingungsfähige Systeme beschreiben und kennen das Phänomen der Resonanzen"
+      ],
+      "kompetenzReihenfolge": {
+        "fach": 2,
+        "methode": 1,
+        "sozial": 3
+      },
+      "methodischeKompetenzen": [
+        "können einfache Experimente aufbauen",
+        "kennen Methoden zur Bewertung und Verbesserung von experimentellen Aufbauten",
+        "besitzen die Fähigkeit Systeme zu identifizieren und deren Bilanzierungen durchzuführen",
+        "sind in der Modellierung und Lösung offener Fragen (Fermi-Probleme) geübt und können diese in die Ingenieurdisziplinen übertragen",
+        "können Ergebnisse interpretieren und verständlich aufbereiten"
+      ],
+      "personaleKompetenzen": [
+        "erkennen die physikalische Verbindung zwischen Ingenieursdisziplinen (z.B. Statik, Dynamik, E-Technik, Thermodynamik)",
+        "sind geübt in Teamarbeit, dabei ist ihnen das Problem unterschiedlich aktiver Teammitglieder bekannt und sie kennen dafür Lösungsmöglichkeiten",
+        "kennen den Adressatenbezug von Veröffentlichen und Texten, sie können gezielt auf Adressaten gerichtet die Information aufbereiten. (Geübt wird als Adressat: Chef, wissenschaftliche Kollegen extern, interne Kollegen)",
+        "können grundlegende PM einsetzen, insbesondere Terminplanung"
+      ],
+      "teilmodule": [
+        {
+          "name": "Physik",
+          "lehrende": "Prof. Dr. C. Hettich / R. Pflaum",
+          "art": "V",
+          "sws": 4,
+          "ects": 4,
+          "inhalt": [
+            "Rechnen, Größenordnungen, Grafiken",
+            "Einheiten und Dimensionen",
+            "Modellbilldung",
+            "physikalische Methoden an den Beispielen: Kinematik",
+            "Erhaltungssätze - Energie, Impuls, Drehimpuls, Ladung",
+            "Energieversorgung der Menschheit",
+            "Labor",
+            "kleine Dimensionen, Licht, Wellen und Teilchen",
+            "Anwendungen der Physik: Energieströme und Physik kleiner Dimensionen"
+          ]
+        },
+        {
+          "name": "Physik, Labor",
+          "lehrende": "Prof. Dr. C. Hettich",
+          "art": "LÜ",
+          "sws": 1,
+          "ects": 1,
+          "inhalt": [
+            "Größenordnung, Schätzen, Experimentieren, Auswerten, Darstellen, Empirie, Theorie, Teamarbeit, Präsentieren",
+            "Experimente aus den Bereichen E-Lehre und Kinetik",
+            "Vollständiger Ablauf zur Durchführung von Experimenten. Aufbau von Experimenten, Auswertung von Experimenten, Optimierung von Experimenten",
+            "Die Durchführung der Messung am optimierten Aufbau wird meist aus Zeitgründen weggelassen, kann aber auf Wunsch oder bei Bedarf durchgeführt werden"
+          ]
+        }
+      ],
+      "literatur": [
+        "Hettich, Jödicke, Sum; Physik Methoden, Springer, 2023",
+        "Tipler, Physik, Spektrum Akademischer Verlag",
+        "Energie und Entropie; Falk-Ruppel, Springer Verlag",
+        "Mahajan, Sanjoy. The Art of Insight in Science and Engineering: Mastering Complexity. MIT Press, 2014"
+      ]
+    },
+    "m9": {
+      "nr": "9",
+      "titel": "Strömungslehre",
+      "kuerzel": "M9",
+      "semester": 2,
+      "typ": "PM",
+      "koordination": "Prof. Dr. A. Lohmberg",
+      "ects": 5,
+      "aufwand": "150 h",
+      "sws": 4,
+      "kontaktzeit": "60 h",
+      "selbststudium": "90 h",
+      "voraussetzung": "—",
+      "verwendbarkeit": {
+        "vorkenntnis": "Strömungssimulation, Strömungsmaschinen, Vertiefung ME",
+        "kombination": "—"
+      },
+      "pruefung": {
+        "modulpruefung": "K90",
+        "modulteilpruefung": "SP"
+      },
+      "endnote": "Note der benoteten Modul(teil)prüfung",
+      "lernziele": [
+        "haben ein grundlegendes Verständnis für Strömungsprozesse mit Fluiden",
+        "können Kräfte in ruhenden Flüssigkeiten berechnen",
+        "kennen strömungstechnische Begriffe und die Grundlagen zur Berechnung von Strömungen",
+        "können Druckverluste berechnen und Systeme hinsichtlich von Verlusten optimieren",
+        "können Kräfte von strömenden und ruhenden Fluiden bestimmen",
+        "können adäquate Messtechnik auswählen um Strömungen experimentell zu untersuchen",
+        "können Messwerte bewerten, interpretieren und daraus Optimierungsmöglichkeiten ableiten",
+        "können im Laborteam mit anderen zusammenarbeiten"
+      ],
+      "kompetenzReihenfolge": {
+        "fach": 1,
+        "methode": 2,
+        "sozial": 3
+      },
+      "teilmodule": [
+        {
+          "name": "Strömungslehre",
+          "lehrende": "Prof. Dr. A. Lohmberg",
+          "art": "V",
+          "sws": 3,
+          "ects": 4,
+          "inhalt": [
+            "Hydrostatik, Schwimmstabilität",
+            "Erhaltungssätze für Masse, Energie und Impuls",
+            "Wirkung der Zähigkeit",
+            "Innen- und Außenströmungen",
+            "Tragflügeltheorie",
+            "Übersicht zur Gasdynamik"
+          ]
+        },
+        {
+          "name": "Strömungslehre, Labor",
+          "lehrende": "Prof. Dr. A. Lohmberg",
+          "art": "LÜ",
+          "sws": 1,
+          "ects": 1,
+          "inhalt": [
+            "Laborversuche (Massenstrombestimmung und Tragflügel im Windkanal)"
+          ]
+        }
+      ],
+      "literatur": [
+        "Bschorer, S.; Költzsch, K: Technische Strömungslehre, Springer, 2025",
+        "Sigloch, H: Technische Fluidmechanik, Hanser, 2024",
+        "Bohl, W.:Elmendorf, W.: Technische Strömungslehre, Vogel, 2014"
+      ]
+    },
+    "m10": {
+      "nr": "10",
+      "titel": "Technische Mechanik 2",
+      "kuerzel": "M10",
+      "semester": 2,
+      "typ": "PM",
+      "koordination": "Prof. Dr. J. Weber",
+      "ects": 5,
+      "aufwand": "150 h",
+      "sws": 6,
+      "kontaktzeit": "90 h",
+      "selbststudium": "60 h",
+      "voraussetzung": "—",
+      "verwendbarkeit": {
+        "vorkenntnis": "Technische Mechanik 1 (M4), Mathematik 1 (2), Werkstoffkunde und Fertigungsverfahren 1 (M3)",
+        "kombination": "Konstruktionslehre 2 und 3 (M10, M12), Finite Elemente Methode (M30), Betriebsfestigkeit (M32a, b)"
+      },
+      "pruefung": {
+        "modulpruefung": "K120",
+        "modulteilpruefung": ""
+      },
+      "endnote": "Note der benoteten Modul(teil)prüfung",
+      "lernziele": [
+        "kennen die Grundlagen, Methoden und Rechenwege der Festigkeitslehre und können diese auf einzelne Maschinenelemente und einfache Gesamtbauteile anwenden.",
+        "kennen die Gesetze und Methoden zur Lösung von Aufgaben aus der Dynamik.",
+        "können einfache dynamische Probleme modellieren und die zum Modell gehörenden Differentialgleichungen analytisch lösen"
+      ],
+      "methodischeKompetenzen": [
+        "können bei der Festigkeitsberechnung und bei der Untersuchung dynamischer Prozesse die Gesamtaufgabe abstrahieren, in Teilschritte unterteilen und diese durchführen."
+      ],
+      "personaleKompetenzen": [
+        "können ihre mechanischen Kenntnisse selbstständig durch Literaturstudium erweitern."
+      ],
+      "kompetenzReihenfolge": {
+        "fach": 1,
+        "methode": 2,
+        "sozial": 3
+      },
+      "teilmodule": [
+        {
+          "name": "Technische Mechanik 2",
+          "lehrende": "Prof. Dr. J. Weber / Prof. Dr. A. Sax / Prof. Dr. P. Steibler",
+          "art": "V, Ü",
+          "sws": 6,
+          "ects": 5,
+          "inhalt": [
+            "Grundbegriffe der Festigkeitslehre: Spannungen, Dehnungen, Materialgesetze.",
+            "Berechnung der Spannungen und Verformungen bei Grundbeanspruchungen: Zug, Druck, Temperatur, Biegung, Schub, Torsion.",
+            "Spannungen und Verformungen bei überlagerten Grundbeanspruchungen, Festigkeitshypothesen.",
+            "Einschätzung von Gültigkeitsbereichen der Formeln der Festigkeitslehre.",
+            "Überprüfung von Berechnungsergebnissen auf physikalische Sinnhaftigkeit und erwartete Größenordnung.",
+            "Kinematik (Kinematik des Massenpunktes, allgemeine Bewegung, Kinematik des starren Körpers).",
+            "Kinetik (Kinetik der Translation und Rotation, ebene Bewegung eines starren Körpers, Impuls, Drall und Energiebetrachtungen).",
+            "Schwingungslehre (freie, ungedämpfte und gedämpfte Schwingungen, erzwungene Schwingungen).",
+            "Aufstellen von gekoppelten Bewegungsgleichungen und deren analytische Lösung."
+          ]
+        }
+      ],
+      "literatur": [
+        "Gabbert, Ulrich; Raecke, Ingo: Technische Mechanik für Wirtschaftsingenieure; 5. Aufl., Fachbuchverlag Leipzig, 2010",
+        "Gross, Dieter; Hauger, Werner; Schröder, Jörg; Wall, Wolfgang A.: Technische Mechanik 2, 11. Aufl., Berlin, Springer Verlag, 2012",
+        "Hibbeler, Russel C.: Technische Mechanik 2 / Festigkeitslehre, 8. Aufl., München, Pearson-Verlag, 2013",
+        "Heinzelmann, Michael: Technische Mechanik in Beispielen und Bildern, 7. Aufl., Heidelberg, Spektrum Verlag, 2008",
+        "Holzmann, Günther; Meyer, Heinz; Schumpich, Georg: Technische Mechanik; Teil 3: Festigkeitslehre; 9. Aufl., Leipzig, Teubner Verlag, 2006",
+        "Steibler: Freischneiden in der Festigkeitslehre, De Gruyter Verlag Verlag 2017"
+      ]
+    },
+    "m11": {
+      "nr": "11",
+      "titel": "Konstruktionslehre und Maschinenelemente 2",
+      "kuerzel": "M11",
+      "semester": 2,
+      "typ": "PM",
+      "koordination": "Prof. Dr. A. Sax",
+      "ects": 5,
+      "aufwand": "150 h",
+      "sws": 4,
+      "kontaktzeit": "60 h",
+      "selbststudium": "90 h",
+      "voraussetzung": "—",
+      "verwendbarkeit": {
+        "vorkenntnis": "Konstruktionslehre 3",
+        "kombination": "Technische Mechanik 2"
+      },
+      "pruefung": {
+        "modulpruefung": "",
+        "modulteilpruefung": "K90, SP"
+      },
+      "endnote": "ECTS-gewichtetes, arithmetisches Mittel der benoteten Modulteilprüfungen",
+      "lernziele": [
+        "können Festigkeitsberechnungen von Konstruktionen durchführen",
+        "können die Befestigungselemente auswählen, dimensionieren und berechnen",
+        "sind in der Lage eine funktionsfähige Konstruktion, auch mit Hilfe von EDV Programmen, selbstständig auszulegen und zu konstruieren",
+        "können den Einsatz der Maschinenelemente wirtschaftlich beurteilen",
+        "erwerben durch die Arbeit in Kleingruppen entsprechende Teamkompetenz",
+        "erkennen die Weiterentwicklung der Berechnungsgrundlagen und -normen als einen Prozess des ständigen Lernens"
+      ],
+      "kompetenzReihenfolge": {
+        "fach": 1,
+        "methode": 2,
+        "sozial": 3
+      },
+      "teilmodule": [
+        {
+          "name": "Konstruktionslehre und Maschinenelemente 2",
+          "lehrende": "Prof. Dr. A. Sax / W. Hoffmann / G. Heer",
+          "art": "V",
+          "sws": 2,
+          "ects": 2,
+          "inhalt": [
+            "Angewandte Festigkeitsberechnungen im Maschinenbau, Nennspannungskonzept und örtliche Spannungen",
+            "Bauformen und Ausführungskonstruktionen, Auslegung nach DIN bzw. Herstellerangaben und die Verwendung in Maschinen/Apparate der Maschinenelemente:",
+            "Schweiß- und Klebeverbindungen",
+            "Stift- und Bolzenverbindungen",
+            "Befestigungsschrauben",
+            "Technische Federn",
+            "Welle-Nabenverbindungen"
+          ]
+        },
+        {
+          "name": "Konstruktionsübung 2",
+          "lehrende": "Prof. Dr. A. Sax / W. Hoffmann / G. Heer",
+          "art": "Ü",
+          "sws": 2,
+          "ects": 3,
+          "inhalt": [
+            "Konstruktionsentwurf in Kleingruppen anhand eines themenrelevanten Beispiels wie z.B. Portalkran"
+          ]
+        }
+      ],
+      "literatur": [
+        "Schlecht, B.: Maschinenelemente 1, Pearson Studium Verlag, 2007",
+        "Decker: Maschinenelemente, 20. Auflage, Hanser Verlag 2018",
+        "Haberhauer, Horst: Maschinenelemente, 18 Auflage, Springer Verlag 2018",
+        "Roloff/Matek: Maschinenelemente: Normung, Berechnung, Gestaltung, 20. Auflage, Vieweg Verlag, 2011"
+      ]
+    },
+    "m12": {
+      "nr": "12",
+      "titel": "Werkstoffkunde und Fertigungsverfahren 2",
+      "kuerzel": "M12",
+      "semester": 2,
+      "typ": "PM",
+      "koordination": "Prof. Dr. L. Boskovic",
+      "ects": 5,
+      "aufwand": "150 h",
+      "sws": 4,
+      "kontaktzeit": "60 h",
+      "selbststudium": "90 h",
+      "voraussetzung": "Werkstoffkunde und Fertigungsverfahren 1",
+      "verwendbarkeit": {
+        "vorkenntnis": "Werkstoffkunde und Fertigungsverfahren",
+        "kombination": "—"
+      },
+      "pruefung": {
+        "modulpruefung": "",
+        "modulteilpruefung": "K45, SP"
+      },
+      "endnote": "Note der benoteten Modul(teil)prüfung",
+      "lernziele": [
+        "kennen die Grundlagen der Kunststofftechnik",
+        "verstehen die Vor- und Nachteile von Kunststoffen im Maschinenbau als auch deren Anwendungsmöglichkeiten im ingenieurwissenschaftlichen Kontext",
+        "verstehen mithilfe der erlernten Grundlagen die Fertigungsverfahren für Kunststoffbauteile",
+        "können mithilfe der erlernten Grundlagen bzgl. der Werkstoffeigenschaften von Kunststoffen Anwendungsmöglichkeiten erarbeiten",
+        "können einfache Versuche (sowohl mit Kunststoffen als auch Metallen) durchführen und interpretieren"
+      ],
+      "kompetenzReihenfolge": {
+        "fach": 1,
+        "methode": 2,
+        "sozial": 3
+      },
+      "teilmodule": [
+        {
+          "name": "Werkstoffkunde und Fertigungsverfahren 2",
+          "lehrende": "Prof. Dr. L. Boskovic",
+          "art": "V, Ü",
+          "sws": 2,
+          "ects": 2,
+          "inhalt": [
+            "erhalten eine Einführung in die Kunststofftechnik und die Chemie der Kunststoffe",
+            "lernen wesentliche Eigenschaften von Kunststoffen und die dazugehörigen Prüftechniken kennen",
+            "lernen, die verschiedenen Kunststoffe nach ihren Eigenschaften zu unterscheiden",
+            "lernen verschiedene Fertigungsverfahren in der Kunststofftechnik kennen"
+          ]
+        },
+        {
+          "name": "Werkstoffkunde und Fertigungsverfahren 1 & 2, Labor",
+          "lehrende": "Prof. Dr. L. Boskovic / Prof. Dr.-Ing. V. Merklinger / J. Klingenberg",
+          "art": "LÜ",
+          "sws": 2,
+          "ects": 3,
+          "inhalt": [
+            "führen einfache Versuche (Kunststoffe und Metalle) im Labor durch und können diese interpretieren"
+          ]
+        }
+      ],
+      "literatur": [
+        "Kaiser, W: Kunststoffchemie für Ingenieure - Von der Synthese bis zur Anwendung. 6. Auflage. München: Hanser Verlag, 2024",
+        "Ehrenstein, G. W.: Faserverbund-Kunststoffe: Werkstoffe-Verarbeitung-Eigenschaften. 2. Auflage. München: Hanser Verlag, 2006",
+        "Grellmann W.; Seidler S.: Kunststoffprüfung. 4. Auflage. München: Hanser-Verlag, 2025"
+      ]
+    },
+    "m13": {
+      "nr": "13",
+      "titel": "Technische Mechanik 3",
+      "kuerzel": "M13",
+      "semester": 3,
+      "typ": "PM",
+      "koordination": "Prof. Dr. R. Winkler",
+      "ects": 5,
+      "aufwand": "150 h",
+      "sws": 4,
+      "kontaktzeit": "60 h",
+      "selbststudium": "90 h",
+      "voraussetzung": "Technische Mechanik 1, Mathematik 1 & 2, Physik",
+      "verwendbarkeit": {
+        "vorkenntnis": "Regelungstechnik, Konstruktionslehre 3 & 4, Projektarbeiten",
+        "kombination": "—"
+      },
+      "pruefung": {
+        "modulpruefung": "K90",
+        "modulteilpruefung": ""
+      },
+      "endnote": "Note der benoteten Modul(teil)prüfung",
+      "lernziele": [
+        "kennen die Gesetze und Methoden zur Lösung von Aufgaben aus der Dynamik",
+        "können Probleme der Dynamik unter Anwendung wissenschaftlicher Methoden identifizieren, formulieren und lösen",
+        "können Probleme modellieren und die zum Modell gehörenden Differentialgleichungen lösen oder simulieren",
+        "kennen viele Anwendungsfälle und kann ihre Kenntnisse auf diese anwenden",
+        "haben ihre Kenntnisse im Simulieren dynamischer Probleme teilweise eigenständig erweitert und sind in der Lage sich weitere benötigte Kenntnisse selbstständig anzueignen",
+        "können ihre Fähigkeiten insbesondere im Bereich der Modellbildung mit geeigneter Software selbstständig vertiefen"
+      ],
+      "kompetenzReihenfolge": {
+        "fach": 1,
+        "methode": 2,
+        "sozial": 3
+      },
+      "teilmodule": [
+        {
+          "name": "Technische Mechanik 3",
+          "lehrende": "Prof. Dr. R. Winkler / Prof. Dr. B. Lege",
+          "art": "V, Ü",
+          "sws": 4,
+          "ects": 5,
+          "inhalt": [
+            "Kinematik (Kinematik des Massenpunktes, allgemeine Bewegung, Kinematik des starren Körpers)",
+            "Kinetik (Kinetik der Translation und Rotation, ebene Bewegung eines starren Körpers, Impuls, Drall und Energiebetrachtungen)",
+            "Schwingungslehre (freie, ungedämpfte und gedämpfte Schwingungen, erzwungene Schwingungen)",
+            "Aufstellen von DGL-Systemen über Bewegungsgleichungen und deren Lösung, in einfachen Fällen analytisch, bei komplexeren Systemen über Simulation"
+          ]
+        }
+      ],
+      "literatur": [
+        "Skripte der lehrenden Professoren",
+        "Dankert, J.; Dankert, H.: Technische Mechanik; 7. Auflage, Verlag Teubner-Verlag, 2013",
+        "Russel C.; Hibbeler: Technische Mechanik 3, Dynamik; 12. Auflage, Pearson-Verlag, 2012",
+        "Gross, D.; Hauger, W., Schröder, J.: Technische Mechanik 3: Kinetik (Springer-Lehrbuch) Taschenbuch. 16. Oktober 2015"
+      ]
+    },
+    "m14": {
+      "nr": "14",
+      "titel": "Finite Elemente Methode",
+      "kuerzel": "M14",
+      "semester": 3,
+      "typ": "PM",
+      "koordination": "Prof. Dr. L. Boskovic",
+      "ects": 5,
+      "aufwand": "150 h",
+      "sws": 4,
+      "kontaktzeit": "60 h",
+      "selbststudium": "90 h",
+      "voraussetzung": "Technische Mechanik 1 und 2, Konstruktionslehre 1 und 2",
+      "verwendbarkeit": {
+        "vorkenntnis": "—",
+        "kombination": "Numerische Strömungssimulation, Konstruktionslehre 3 und 4"
+      },
+      "pruefung": {
+        "modulpruefung": "SP",
+        "modulteilpruefung": ""
+      },
+      "endnote": "Note der benoteten Modul(teil)prüfung",
+      "lernziele": [
+        "kennen die Grundlagen der Finiten Elemente Methode",
+        "verstehen die Zusammenhänge der Finiten Elemente Simulation im Maschinenbau als auch deren Anwendungsmöglichkeiten im ingenieurwissenschaftlichen Kontext",
+        "können mithilfe der erlernten Grundlagen das Konzept der Finiten Elemente Methode formulieren und verstehen",
+        "können mithilfe des FEM-Simulationsprogramms ANSYS eigene Berechnungen durchführen und interpretieren"
+      ],
+      "kompetenzReihenfolge": {
+        "fach": 2,
+        "methode": 1,
+        "sozial": 3
+      },
+      "teilmodule": [
+        {
+          "name": "Finite Elemente Methode, Theorie",
+          "lehrende": "Prof. Dr. L. Boskovic",
+          "art": "V, Ü",
+          "sws": 2,
+          "ects": 2,
+          "inhalt": [
+            "erhalten eine Einführung in die Finite Elemente Methode",
+            "lernen die Grundlagen der linearen Finite Elemente Methode kennen",
+            "erhalten einen Überblick über das Konzept der Finite Elemente Methode"
+          ]
+        },
+        {
+          "name": "Finite Elemente Methode, Übung",
+          "lehrende": "Prof. Dr. L. Boskovic",
+          "art": "LÜ, PJ",
+          "sws": 2,
+          "ects": 3,
+          "inhalt": [
+            "lernen, wie das Konzept der Finite Elemente Methode anzuwenden ist",
+            "lernen wichtige Prinzipien bei der Finite Elemente Berechnung in der Anwendung umzusetzen",
+            "führen eigene Berechnungen mit dem Simulationsprogramm ANSYS durch und können diese interpretieren"
+          ]
+        }
+      ],
+      "literatur": [
+        "K. Knothe, H. Wessels: Finite Elemente – Eine Einführung für Ingenieure. 5. Auflage. Berlin, Heidelberg: Springer-Verlag, 2017",
+        "B. Klein: FEM – Grundlagen und Anwendungen der Finite-Element-Methode im Maschinen- und Fahrzeugbau. 10. Auflage. Wiesbaden: Springer Vieweg Verlag, 2015",
+        "L. Nasdala: FEM-Formelsammlung Statik und Dynamik. 3. Auflage. Wiesbaden: Springer Vieweg Verlag, 2015",
+        "Y. Deger: Die Methode der Finiten Elemente – Grundlagen und Einsatz in der Praxis. 8. Auflage. Renningen: expert Verlag, 2017",
+        "C. Gebhardt: Praxisbuch FEM mit ANSYS Workbench – Einführung in die lineare und nichtlineare Mechanik. 3. Auflage. München: Carl Hanser Verlag, 2018"
+      ]
+    },
+    "m15": {
+      "nr": "15",
+      "titel": "Thermodynamik",
+      "kuerzel": "M15",
+      "semester": 3,
+      "typ": "PM",
+      "koordination": "Prof. Dr. P. Stein",
+      "ects": 5,
+      "aufwand": "150 h",
+      "sws": 4,
+      "kontaktzeit": "60 h",
+      "selbststudium": "90 h",
+      "voraussetzung": "Physik",
+      "verwendbarkeit": {
+        "vorkenntnis": "Antrieb und Energieversorgung, Energiesysteme, Erneuerbare Energien, Wärme- und Stoffübertragung",
+        "kombination": "—"
+      },
+      "pruefung": {
+        "modulpruefung": "K90, SP",
+        "modulteilpruefung": ""
+      },
+      "endnote": "Note der benoteten Modul(teil)prüfung",
+      "lernziele": [
+        "kennen die Grundlagen der Thermodynamik, mit deren physikalischen Hintergründen und ist in der Lage thermodynamische Berechnungen durchzuführen",
+        "kennen die Kreisprozesse mit den dazugehörigen technischen Komponenten und kann thermodynamische Maschinen in ihrer Wirkungsweise beschreiben",
+        "sind in der Lage die Hauptsätze der Thermodynamik anzuwenden und praktische Problemstellungen damit zu lösen. Sie können mit idealen Gasgleichungen und realen Gasen umgehen sowie Kreisprozesse berechnen",
+        "können einordnen, wann mit idealen Gasgesetzen und wann mit realen Gas gerechnet werden muss",
+        "können Grundauslegungen (Temperaturen, Drücke) thermodynamischer Anlagen wie z.B. einer Wärmepumpe erarbeiten und den Wirkungsgrad berechnen"
+      ],
+      "kompetenzReihenfolge": {
+        "fach": 1,
+        "methode": 2,
+        "sozial": 3
+      },
+      "teilmodule": [
+        {
+          "name": "Thermodynamik",
+          "lehrende": "Prof. Dr. P. Stein",
+          "art": "V, Ü",
+          "sws": 4,
+          "ects": 5,
+          "inhalt": [
+            "Grundlagen der Thermodynamik (Hauptsätze)",
+            "Gas und Gasgemische",
+            "Mehrphasige Systeme",
+            "Kreisprozesse",
+            "Feuchte Luft",
+            "Verbrennungsrechnung (Luftbedarf, Abgaszusammensetzung, Wärmefreisetzung)"
+          ]
+        }
+      ],
+      "literatur": [
+        "Skript",
+        "Langeheineke „Thermodynamik für Ingenieure“",
+        "Barth „Thermodynamik für Maschinenbauer“"
+      ]
+    },
+    "m16": {
+      "nr": "16",
+      "titel": "Elektrotechnik",
+      "kuerzel": "M16",
+      "semester": 3,
+      "typ": "PM",
+      "koordination": "Prof. Dr. R. Nägele",
+      "ects": 5,
+      "aufwand": "150 h",
+      "sws": 4,
+      "kontaktzeit": "60 h",
+      "selbststudium": "90 h",
+      "voraussetzung": "Mathematik 1 und 2, Physik",
+      "verwendbarkeit": {
+        "vorkenntnis": "Regelungs- und Steuerungstechnik, Elektrische Antriebe",
+        "kombination": "—"
+      },
+      "pruefung": {
+        "modulpruefung": "K90",
+        "modulteilpruefung": ""
+      },
+      "endnote": "Note der benoteten Modul(teil)prüfung",
+      "lernziele": [
+        "kennen und verstehen grundlegende Zusammenhänge und Komponenten der Elektro­technik vor dem Hintergrund praktischer Anwendungen im Maschinenbau",
+        "können Methoden der Mathematik und Physik auf elektrotechnische Problemstellungen übertragen",
+        "kennen grundlegende Methoden der Schaltungsanalyse und sind in der Lage, ihr theoretisches Wissen in einfachen praxisnahen Aufgabenstellungen mit maschinenbautechnischem Hintergrund anzuwenden",
+        "sind in der Lage, dynamische Modelle von einfachen elektrischen Schaltungen zu erstellen und damit das dynamische Verhalten dieser Schaltungen zu simulieren"
+      ],
+      "kompetenzReihenfolge": {
+        "fach": 1,
+        "methode": 2,
+        "sozial": 3
+      },
+      "methodischeKompetenzen": "Siehe fachliche Kompetenzen!",
+      "teilmodule": [
+        {
+          "name": "Elektrotechnik",
+          "lehrende": "Prof. Dr. R. Nägele",
+          "art": "V, Ü, LÜ",
+          "sws": 4,
+          "ects": 5,
+          "inhalt": [
+            "Strang A: Schaltungen für den Antrieb einer Maschine mit einem Gleichstrommotor — Diode zum Gleichrichten, Definition U, I, Dioden-Kennlinie, Gleichrichter mit 4 Dioden",
+            "Grundlegendes über Halbleiter, Dotierung und pn-Übergang. Gleichrichter mit 1 bzw. 4 Dioden, Messung mit Oszilloskop, Leiter, Halbleiter, Dotierung, pn-Übergang, Solarzelle (Photodiode)",
+            "Zwischenkreis-Kondensator hinter dem Gleichrichter, elektrisches Feld in C, DGL für C; Modellbildung und Simulation zu Gleichrichter, C, R",
+            "Schalter, Relais, Eigenschaft Relais-Spule, magnetisches Feld, Selbstinduktion, DGL für L, Freilaufdiode",
+            "Aufbau und Wirkungsweise DC-Motor, Lorentzkraft auf eine Leiterschleife, Drehmomenterzeugung, kT, DGL",
+            "Relais-Schaltung für Drehrichtungswechsel, H-Brücke mit Freilaufdioden",
+            "Strang B: Sensorik mit Widerständen und Operationsverstärkerschaltungen — Widerstand in Abhängigkeit von Material und Geometrie, Ohm'sches Gesetz, Widerstandsmessung, Leistung am Ohm'schen Widerstand, Temperaturabhängigkeit",
+            "Spannungsquelle, Stromquelle, ideal und technisch, Innenwiderstand, linear und nichtlinear (PV-Anlage)",
+            "Widerstandsschaltungen, Potentiometer, Weg- und Winkelmessung mit Poti, unbelastet und belastet; Kirchhoffsche Regeln",
+            "Operationsverstärker, nicht invertierende und Verstärkerschaltung, Spannungsfolger",
+            "Invertierender OP-Verstärker, Addierer, Differenzverstärker; DMS, Wheatstone'sche Brücke, Instrumentenverstärker",
+            "Integrierer-Schaltung, Differenzierer-Schaltung, Schmitt-Trigger-Schaltung",
+            "Strang C: Transistorschaltungen für den dosierten Antrieb einer Maschine — Bipolar-npn-Transistor, Aufbau, Grundschaltung im Schaltbetrieb",
+            "MOS-FET im Schaltbetrieb; Bipolare Transistoren als Treiberschaltung für MOS-FETs; H-Brücke; H-Brücke mit PWM angesteuert",
+            "Strang D: Signalverarbeitung mit OP-Schaltungen, Piezo- und Hall-Sensoren — PT1-Tiefpass passiv und mit inv. OP, DGL",
+            "Von der DGL zum Frequenzgang, Bode-Diagramm; Ladungsverstärker für piezoelektrische Sensoren",
+            "DT1-Hochpass passiv und mit invertierendem OP, Differenzierer; RLC-Schwingkreis passiv, DGL, Bode; RLC-Schwingkreis",
+            "Hall-Effekt, Lorentzkraft, Unterschied zwischen n- und p-dotierten Halbleitern"
+          ]
+        }
+      ],
+      "literatur": [
+        "Rolf Fischer: Elektrotechnik für Maschinenbauer sowie Studierende technischer Fächer, 16. Auflage, Springer Vieweg, 2019",
+        "Ismail Kasikci: Gleichstromschaltungen – Analyse und Berechnung mit vielen Beispielen, 6. Auflage, Springer Vieweg, 2025",
+        "Ekbert Hering, Rolf Martin, Jürgen Gutekunst, Joachim Kempkes (Hrsg.): Elektrotechnik und Elektronik für Maschinenbauer, 4. Auflage, Springer Vieweg, 2018",
+        "O. N. Pandey: Electronics Engineering, 2nd ed. 2022, Springer",
+        "Brophy, James John: Basic electronics for scientists, 5. ed., McGraw-Hill, 1990",
+        "Zastrow, Dieter: Elektronik: Elektrotechnik: ein Grundlagenlehrbuch, 20. Aufl., Springer Vieweg, 2018",
+        "Unterlagen auf Moodle",
+        "Öffentlich zugängliche Erklär-Videos"
+      ]
+    },
+    "m17": {
+      "nr": "17",
+      "titel": "Programming (EN)",
+      "kuerzel": "M17",
+      "semester": 3,
+      "typ": "PM",
+      "koordination": "Prof. Dr. T. Hellmuth",
+      "ects": 5,
+      "aufwand": "150 h",
+      "sws": 4,
+      "kontaktzeit": "60 h",
+      "selbststudium": "90 h",
+      "voraussetzung": "keine",
+      "verwendbarkeit": {
+        "vorkenntnis": "—",
+        "kombination": "—"
+      },
+      "pruefung": {
+        "modulpruefung": "K90",
+        "modulteilpruefung": "SP"
+      },
+      "endnote": "—",
+      "lernziele": [
+        "kennen die Grundlagen der Programmierung (Variablen, Kontrollstrukturen, Funktionen, Module)",
+        "können Daten einlesen, analysieren und visualisieren (z. B. Messdaten, Simulationsergebnisse)",
+        "können Datenstrukturen und Algorithmen für technische Problemstellungen implementieren",
+        "können Numerische Methoden (z. B. Lösung von Gleichungssystemen, numerische Integration, Optimierung) verstehen und anwenden",
+        "können Schnittstellen zu Ingenieurtools (z. B. CAD, MATLAB, Excel) nutzen",
+        "können kleine Projekte selbstständig planen, programmieren und dokumentieren"
+      ],
+      "kompetenzReihenfolge": {
+        "fach": 2,
+        "methode": 1,
+        "sozial": 3
+      },
+      "teilmodule": [
+        {
+          "name": "Programming (EN)",
+          "lehrende": "Prof. Dr. T. Hellmuth",
+          "art": "V, Ü",
+          "sws": 4,
+          "ects": 5,
+          "inhalt": [
+            "Wir verwenden die aktuellen Werkzeuge aus der Softwareentwicklung und stellen die Arbeitsweise kleiner Softwareentwicklungsprojekte nach. Wir planen, entwerfen und programmieren kleinere Anwendungen."
+          ]
+        }
+      ],
+      "literatur": [
+        "H. Woyand: \"Python für Ingenieure und Naturwissenschaftler\", 5. Auflage, Hanser Books (2025)"
+      ]
+    },
+    "m18": {
+      "nr": "18",
+      "titel": "Mathematik 3",
+      "kuerzel": "M18",
+      "semester": 3,
+      "typ": "PM",
+      "koordination": "Prof. Dr. R. Eissler",
+      "ects": 5,
+      "aufwand": "150 h",
+      "sws": 4,
+      "kontaktzeit": "60 h",
+      "selbststudium": "90 h",
+      "voraussetzung": "Mathematik 1: Differential- und Integralrechnung",
+      "verwendbarkeit": {
+        "vorkenntnis": "Qualitätsmanagement, Betriebsfestigkeit, Messtechnik",
+        "kombination": "—"
+      },
+      "pruefung": {
+        "modulpruefung": "K90",
+        "modulteilpruefung": ""
+      },
+      "endnote": "Note der benoteten Modul(teil)prüfung",
+      "lernziele": [
+        "beherrschen die grundlegenden Begriffe, Methoden und Techniken der deskriptiven Statistik. Sie sind in der Lage, selbstständig zu entscheiden, welche statistische Größe zur Beantwortung einer Fragestellung geeignete Aussagen liefert und die erforderlichen Berechnungen selbstständig durchzuführen",
+        "kennen die wahrscheinlichkeitstheoretischen Grundlagen und die wichtigsten Verteilungsmodelle und können diese auf praktische Problemstellungen übertragen"
+      ],
+      "kompetenzReihenfolge": {
+        "fach": 2,
+        "methode": 1,
+        "sozial": 3
+      },
+      "methodischeKompetenzen": [
+        "wenden die statistischen Verfahren auf Problemstellungen aus den Ingenieurwissenschaften sachgerecht an",
+        "besitzen die Fähigkeit zur statistischen Modellierung und Lösung der Probleme sowie zur Interpretation, Präsentation und kritischen Diskussion der Ergebnisse",
+        "sind in der Lage statistische Problemstellungen mit Hilfe von Statistik-Software zu lösen, die dabei gewonnenen Ergebnisse zu interpretieren und kritisch zu hinterfragen"
+      ],
+      "personaleKompetenzen": [
+        "können mit Hilfe von statistischen Methoden und Werkzeugen Workshops moderieren und in der Gruppe Problemstellungen lösen",
+        "besitzen die Fähigkeit zur angemessenen Präsentation und Interpretation statistischer Ergebnisse",
+        "sind befähigt zur kritischen Diskussion publizierter empirischer Studien bzw. ihrer Ergebnisse",
+        "besitzen einen problembewussten Umgang mit quantitativer Information und wahrscheinlichkeitstheoretischen Aussagen"
+      ],
+      "teilmodule": [
+        {
+          "name": "Statistik und Qualitätsmanagement",
+          "lehrende": "Prof. Dr. R. Eissler",
+          "art": "V, Ü",
+          "sws": 4,
+          "ects": 5,
+          "inhalt": [
+            "Eindimensionale deskriptive Statistik",
+            "Zweidimensionale deskriptive Statistik",
+            "Kombinatorik",
+            "Grundlagen der Wahrscheinlichkeitsrechnung",
+            "Diskrete Zufallsverteilungen",
+            "Stetige Zufallsverteilungen",
+            "Parametertest",
+            "Parameterschätzung"
+          ]
+        }
+      ],
+      "literatur": [
+        "Skript zur Vorlesung",
+        "Papula, L.: Mathematik für Ingenieure und Naturwissenschaftler Band 3",
+        "Papula, L.: Mathematische Formelsammlung"
+      ]
+    },
+    "m19": {
+      "nr": "19",
+      "titel": "Integriertes Praktisches Studiensemester",
+      "kuerzel": "M19",
+      "semester": 4,
+      "typ": "PM",
+      "koordination": "Prof. Dr. P. Stein",
+      "ects": 30,
+      "aufwand": "900 h",
+      "sws": 1,
+      "kontaktzeit": "15 h",
+      "selbststudium": "885 h",
+      "voraussetzung": "Bestandenes Grundstudium, Sem. 1 und 2",
+      "verwendbarkeit": {
+        "vorkenntnis": "Bachelorarbeit, Qualitätsmanagement, Ökonomie",
+        "kombination": "—"
+      },
+      "pruefung": {
+        "modulpruefung": "B, PR",
+        "modulteilpruefung": ""
+      },
+      "endnote": "Sonstiges: unbenotet",
+      "lernziele": [
+        "kennen die unterschiedlichen Arbeitsfelder ihres Ausbildungsunternehmens",
+        "können verschiedene Aufgabengebiete von Maschinenbauingenieuren beschreiben",
+        "verstehen die interne Organisation und das Zusammenspiel der verschiedenen Abteilungen ihres Ausbildungsunternehmens",
+        "wenden das in den ersten Studiensemestern angeeignete Wissen an und bearbeiten im Team oder eigenständig ein ingenieurwissenschaftliches Projekt"
+      ],
+      "kompetenzReihenfolge": {
+        "fach": 1,
+        "methode": 2,
+        "sozial": 3
+      },
+      "teilmodule": [
+        {
+          "name": "Ausbildung in der Praxis",
+          "lehrende": "Prof. Dr. P. Stein",
+          "art": "o",
+          "sws": 0,
+          "ects": 26,
+          "inhalt": [
+            "95 Präsenztage im Betrieb"
+          ]
+        },
+        {
+          "name": "Praktikantenbericht und Präsentation",
+          "lehrende": "Prof. Dr. P. Stein",
+          "art": "o",
+          "sws": 1,
+          "ects": 4,
+          "inhalt": [
+            "Praktikantenbericht und Präsentation"
+          ]
+        }
+      ],
+      "literatur": [
+        "Hering, L.; Hering, C.: Technische Berichte, Gliedern Gestalten Vortragen, 7. Aufl., Wiesbaden, Vieweg Verlag, 2015"
+      ]
+    },
+    "m20": {
+      "nr": "20",
+      "titel": "Steuerungs- und Regelungstechnik",
+      "kuerzel": "M20",
+      "semester": 5,
+      "typ": "PM",
+      "koordination": "Prof. Dr. R. Nägele",
+      "ects": 5,
+      "aufwand": "150 h",
+      "sws": 4,
+      "kontaktzeit": "60 h",
+      "selbststudium": "90 h",
+      "voraussetzung": "Lineare DGL, physikalische Bewegungsgleichungen nach Newton, Aufstellen von DGL für Drehbewegungen, Grundlagen der Programmierung",
+      "verwendbarkeit": {
+        "vorkenntnis": "—",
+        "kombination": "Messtechnik, Elektrische Antriebe"
+      },
+      "pruefung": {
+        "modulpruefung": "K90",
+        "modulteilpruefung": "L"
+      },
+      "endnote": "Note der benoteten Modul(teil)prüfung",
+      "lernziele": [
+        "SISO-Systeme nach der grundsätzlichen Systemdynamik klassifizieren",
+        "zwischen stationärem und dynamischem Verhalten von Systemen unterscheiden",
+        "ein System, eine Anlage, einen Prozess analysieren nach Wirkzusammenhängen, und welche Größen wodurch beeinflusst und wie gemessen werden",
+        "typische Nichtlinearitäten (Reibung, Sättigung, Hysterese) im Maschinenbau erkennen",
+        "die stationäre Kennlinie eines Systems experimentell bestimmen",
+        "Sprungantworten praktisch messen und zeichnerisch auswerten",
+        "einen zum System und den Anforderungen passenden PID-Regler auslegen",
+        "die Wirkungsweise von P-Teil, I-Teil, D-Teil erklären",
+        "ausgehend von einer Aufgabendefinition SPS-Funktionsbausteine in Ablaufsprache erstellen",
+        "nachvollziehbar mit Kommentaren und sprechenden Variablennamen programmieren"
+      ],
+      "kompetenzReihenfolge": {
+        "fach": 2,
+        "methode": 1,
+        "sozial": 3
+      },
+      "methodischeKompetenzen": [
+        "eine Gesamtaufgabe in Teilaufgaben mit wiederverwendbaren Funktionsbausteinen gliedern",
+        "in Kleingruppen eine Spezifikation ausarbeiten und diese im Review vertreten",
+        "ein Softwareprojekt aufteilen auf Programmierteams und den Projektablauf überwachen",
+        "bei der Inbetriebnahme des SPS-Programms systematisch Fehler suchen",
+        "Experimente reproduzierbar dokumentieren"
+      ],
+      "personaleKompetenzen": [
+        "mit anderen über eine Anlage und deren Aktoren und Sensoren sprechen",
+        "im Fachgespräch und in technischen Berichten die systemdynamischen Fachbegriffe verwenden und verstehen",
+        "im Fachgespräch überzeugen und sich überzeugen lassen"
+      ],
+      "teilmodule": [
+        {
+          "name": "Steuerungs- und Regelungstechnik 1",
+          "lehrende": "Prof. Dr. R. Nägele",
+          "art": "V, Ü",
+          "sws": 3,
+          "ects": 3,
+          "inhalt": [
+            "KAPITEL 1 Grundsätzliche Struktur eines Control System",
+            "KAPITEL 2 Steuerungstechnik – Speicherprogrammierbare Steuerungen (SPS)",
+            "KAPITEL 3 Grundlagen der Systemdynamik (DGL, Übertragungsfunktion, Bode-Diagramm)",
+            "KAPITEL 4 Messung der Systemdynamik",
+            "KAPITEL 5 Reglerdesign",
+            "KAPITEL 6 Wichtige Übertragungsglieder"
+          ]
+        },
+        {
+          "name": "Steuerungs- und Regelungstechnik 1, Labor",
+          "lehrende": "Prof. Dr. R. Nägele",
+          "art": "LÜ",
+          "sws": 1,
+          "ects": 2,
+          "inhalt": [
+            "Labor-Experimente in Zweier-Gruppen",
+            "Stationäre Kennlinie von Systemen mit und ohne Ausgleich",
+            "Durchführung von Sprungantwortexperimenten und zeichnerische Auswertung",
+            "Entwurf eines passenden PI- oder PID-Reglers",
+            "SPS-Programmierung in Funktionsbausteinsprache und Ablaufsprache",
+            "Inbetriebnahme und systematische Fehlersuche",
+            "Größeres SPS-Projekt zur strukturierten Programmierung in Vierer-Gruppen"
+          ]
+        }
+      ],
+      "literatur": [
+        "Skript Steuerungs- und Regelungstechnik und begleitende Unterlagen in Moodle",
+        "Seitz, Matthias: Speicherprogrammierbare Steuerungen im Industrial IoT, Hanser Fachbuch, 6. Aufl. 2024",
+        "Lunze, Jan: Regelungstechnik 1, 12. Aufl. 2020, Springer"
+      ]
+    },
+    "m21": {
+      "nr": "21",
+      "titel": "Messtechnik",
+      "kuerzel": "M21",
+      "semester": 5,
+      "typ": "PM",
+      "koordination": "Prof. Dr. H. Gimpel",
+      "ects": 5,
+      "aufwand": "150 h",
+      "sws": 6,
+      "kontaktzeit": "90 h",
+      "selbststudium": "60 h",
+      "voraussetzung": "Physik, Elektrotechnik",
+      "verwendbarkeit": {
+        "vorkenntnis": "—",
+        "kombination": "Regelungstechnik"
+      },
+      "pruefung": {
+        "modulpruefung": "K90",
+        "modulteilpruefung": "L"
+      },
+      "endnote": "Note der benoteten Modul(teil)prüfung",
+      "lernziele": [
+        "haben maschinenbaurelevante Grundkenntnisse der Messtechnik, Sensorik und Signalverarbeitung.",
+        "haben das notwendige Grundwissen in Optik, um die Funktionsweise von optischen Sensoren zu verstehen.",
+        "verstehen, dass messtechnische Aufgaben fast immer interdisziplinär gelöst werden.",
+        "haben Grundkenntnisse in der digitalen Verarbeitung und Analyse von Messdaten.",
+        "kennen die Methoden und Konzepte, mit denen man messtechnische Probleme im Maschinenbau lösen kann.",
+        "besitzen die Fähigkeit, für eine Messaufgabe im Maschinenbau die dafür geeigneten Messmethoden und passenden Messgeräte/Sensoren auszuwählen."
+      ],
+      "kompetenzReihenfolge": {
+        "fach": 1,
+        "methode": 2,
+        "sozial": 3
+      },
+      "methodischeKompetenzen": [
+        "können die praktische Vorgehensweise für eine Messung an einem Versuchsaufbau planen und die Ergebnisse auf Plausibilität prüfen",
+        "können einen Laborbericht nach Vorgaben erstellen."
+      ],
+      "personaleKompetenzen": [
+        "können in einer kleinen Gruppe zusammen an einem Gerät arbeiten"
+      ],
+      "teilmodule": [
+        {
+          "name": "Messtechnik",
+          "lehrende": "Prof. Dr. H. Gimpel / Prof. Dr. C. Hettich",
+          "art": "V",
+          "sws": 4,
+          "ects": 3,
+          "inhalt": [
+            "Grundlagen der Messtechnik",
+            "Grundlagen der Optik",
+            "Messunsicherheitsberechnung nach GUM",
+            "Prüfprozesseignung",
+            "physikalische Grundlagen von wichtigen Wirkprinzipien in der Messtechnik",
+            "wichtige Sensoren und Messverfahren im Maschinenbau",
+            "rechnergestützte Messtechnik und Signalanalyseverfahren"
+          ]
+        },
+        {
+          "name": "Messtechnik, Labor",
+          "lehrende": "Prof. Dr. H. Gimpel / Prof. Dr. A. Basler / Prof. Dr. C. Hettich",
+          "art": "LÜ",
+          "sws": 2,
+          "ects": 2,
+          "inhalt": [
+            "Messen von Kraft, Drehmoment, Druck, Länge, Temperatur, Füllstand, Drehzahl, Schwingungen",
+            "optische Messmethoden",
+            "3D-Koordinatenmesstechnik",
+            "Oberflächenmesstechnik",
+            "Frequenzanalyse",
+            "Programmierung von messtechnischen Anwendungen in LabVIEW oder mit dem Arduino",
+            "industrielle Bildverarbeitung"
+          ]
+        }
+      ],
+      "literatur": [
+        "Ausführliche Vorlesungsunterlagen",
+        "Weitere Literatur wird in der Vorlesung angegeben"
+      ]
+    },
+    "m28": {
+      "nr": "28",
+      "titel": "Projektarbeit 1",
+      "kuerzel": "M28",
+      "semester": 5,
+      "typ": "PM",
+      "koordination": "Prof. Dr. T. Hellmuth",
+      "ects": 5,
+      "aufwand": "150 h",
+      "sws": 0,
+      "kontaktzeit": "0 h",
+      "selbststudium": "150 h",
+      "voraussetzung": "Die Module der ersten vier Semester",
+      "verwendbarkeit": {
+        "vorkenntnis": "Projektarbeit 2, Bachelorarbeit",
+        "kombination": "Module der Vertiefungsrichtungen"
+      },
+      "pruefung": {
+        "modulpruefung": "SP",
+        "modulteilpruefung": ""
+      },
+      "endnote": "Note der benoteten Modul(teil)prüfung",
+      "lernziele": [
+        "wenden gelerntes Wissen und Prinzipien in der Praxis an",
+        "erarbeiten selbständig neues Wissen, auch auf Grundlage vorgegebener Themen",
+        "planen Projekte systematisch und strukturiert und führen sie ergebnisorientiert durch",
+        "kooperieren konfliktlösend in Teams",
+        "schreiben sprachlich präzise und sachlich korrekte Texte und halten ebensolche Vorträge",
+        "zeigen durch Beachtung der Richtlinien von Anweisungen, Instruktionen und Planungen ein entwickeltes Arbeits- und Selbstmanagement"
+      ],
+      "kompetenzReihenfolge": {
+        "fach": 1,
+        "methode": 2,
+        "sozial": 3
+      },
+      "teilmodule": [
+        {
+          "name": "Projektarbeit 1",
+          "lehrende": "Professor*innen der Fakultät MA",
+          "art": "PJ",
+          "sws": 0,
+          "ects": 5,
+          "inhalt": [
+            "Die Lehrinhalte werden durch das jeweilige Projekt bestimmt",
+            "Die Projekte werden teilweise in Teams durchgeführt"
+          ]
+        }
+      ],
+      "literatur": [
+        "Hering, L.; Hering, C.: Technische Berichte, Gliedern Gestalten Vortragen, 7. Aufl., Wiesbaden, Vieweg Verlag, 2015",
+        "Ebel, H. F.; Bliefert, C.: Schreiben und Publizieren in den Naturwissenschaften, 5. Aufl., WILEY-YCH Verlag, Weinheim, 2006"
+      ]
+    },
+    "m29": {
+      "nr": "29",
+      "titel": "Studium generale und Sozialkompetenz",
+      "kuerzel": "M29",
+      "semester": 5,
+      "typ": "PM",
+      "koordination": "Prof. Dr. T. Hellmuth",
+      "ects": 2,
+      "aufwand": "60 h",
+      "sws": 0,
+      "kontaktzeit": "0 h",
+      "selbststudium": "60 h",
+      "voraussetzung": "—",
+      "verwendbarkeit": {
+        "vorkenntnis": "—",
+        "kombination": "—"
+      },
+      "pruefung": {
+        "modulpruefung": "",
+        "modulteilpruefung": "(x), (x)"
+      },
+      "endnote": "Sonstiges: unbenotet",
+      "lernziele": [
+        "Studium Generale: Aus dem Curriculum der HTWG Konstanz sowie der Universität Konstanz ist eine Lehrveranstaltung im Wert von ein oder zwei ECTS-Punkten frei wählbar.",
+        "Sozialkompetenz: Die Studierenden erwerben einen oder zwei ECTS-Punkte mit Aufgaben, die anderen Studierenden unmittelbar zu Gute kommen (z.B. Tutorien, Unterstützung ausländischer Studierender)."
+      ],
+      "kompetenzReihenfolge": {
+        "fach": 1,
+        "methode": 2,
+        "sozial": 3
+      },
+      "teilmodule": [
+        {
+          "name": "Studium generale",
+          "lehrende": "Prof. Dr. T. Hellmuth",
+          "art": "X",
+          "sws": 0,
+          "ects": 1,
+          "inhalt": [
+            "Die zwei ECTS-Punkte können entweder ganz durch das Studium generale oder durch das soziale Engagement belegt werden, es ist auch eine Kombination beider Teile mit jeweils einem ECTS-Punkt möglich"
+          ]
+        },
+        {
+          "name": "Sozialkompetenz",
+          "lehrende": "Prof. Dr. T. Hellmuth",
+          "art": "X",
+          "sws": 0,
+          "ects": 1,
+          "inhalt": [
+            "Die zwei ECTS-Punkte können entweder ganz durch das Studium generale oder durch das soziale Engagement belegt werden, es ist auch eine Kombination beider Teile mit jeweils einem ECTS-Punkt möglich"
+          ]
+        }
+      ],
+      "literatur": []
+    },
+    "m27": {
+      "nr": "27",
+      "titel": "Wahlpflichtbereich gem. Absatz 14",
+      "kuerzel": "M27",
+      "semester": 5,
+      "typ": "WPM",
+      "koordination": "Prof. Dr. T. Hellmuth",
+      "ects": 15,
+      "aufwand": "450 h",
+      "sws": 21,
+      "kontaktzeit": "0 h",
+      "selbststudium": "450 h",
+      "voraussetzung": "—",
+      "verwendbarkeit": {
+        "vorkenntnis": "—",
+        "kombination": "—"
+      },
+      "pruefung": {
+        "modulpruefung": "",
+        "modulteilpruefung": "K45, K45, B, K45, S, T, T, S, L"
+      },
+      "endnote": "—",
+      "lernziele": [
+        "Individuelle Profilbildung in verschiedenen Wahlfächern."
+      ],
+      "teilmodule": [
+        {
+          "name": "Mechanismen/Getriebelehre",
+          "lehrende": "Prof. Dr. Dr. K. Heppler",
+          "art": "V, Ü",
+          "sws": 2,
+          "ects": 2,
+          "inhalt": [
+            "Bauarten von gleichmäßig und ungleichförmig übertragenden Mechanismen",
+            "Verzahnungsgeometrie und Festigkeitsnachweis",
+            "Inverse Kinematik",
+            "Kinematische und Kinetische Analyse von Stirnradgetriebe, Umlaufgetriebebauarten und ungleichförmig übertragenden Mechanismen wie Kurvengetriebe, Koppelgetriebe mittels numerischer Simulation",
+            "Getriebelaufgrad und Lagerbauarten",
+            "Ableitung der Bewegungsgleichungen",
+            "Digitaler Zwilling einer Maschine",
+            "Abgleich des Lernstoffes aus den Modulen Konstruktionslehre 2 und 3 und Technische Mechanik 3",
+            "Zusammenhänge des Festigkeitsnachweises von bewegten Mechanismen",
+            "Aufbau und Berechnung von Kurvengetrieben"
+          ]
+        },
+        {
+          "name": "Mechanismen, Getriebelehre Seminarübung",
+          "lehrende": "Prof. Dr. Dr. K. Heppler",
+          "art": "S",
+          "sws": 2,
+          "ects": 3,
+          "inhalt": [
+            "In Kleingruppen werden ausgewählte Beispiele der bewegten Mechanismen zu den Punkten Funktion, Einsatz, Methodik des Funktionsnachweises (Festigkeit, Kinematik und Kinetik) erarbeitet und seminaristisch studiert",
+            "den Einsatz von spezifischen Berechnungsprogrammen wird diskutiert und an den Beispielen abgewogen",
+            "Die Bedienung eines MKS Simulationssystems (Ansys Motion, Solid Works Motion etc.) wird erlernt und an Beispielmechanismen in Kleingruppen geübt"
+          ]
+        },
+        {
+          "name": "Leichtbauanwendungen",
+          "lehrende": "Prof. Dr.-Ing. T. Deißer",
+          "art": "V",
+          "sws": 2,
+          "ects": 2,
+          "inhalt": [
+            "In diesem Modul werden Kenntnisse der für Leichtbau einsetzbaren Werkstoffe (Herstellung und Eigenschaften) vermittelt. Darüber hinaus werden Leichtbaustrategien (Stoff-, Form- und Konzeptleichtbau) an Anwendungsbeispielen veranschaulicht",
+            "Der Einsatz von Multi-Material-Bauteilen wird verdeutlicht, sowie produktionstechnische und konstruktive Alleinstellungsmerkmale behandelt."
+          ]
+        },
+        {
+          "name": "Werkzeugmaschinen",
+          "lehrende": "Prof. Dr. A. Sax",
+          "art": "V",
+          "sws": 4,
+          "ects": 4,
+          "inhalt": [
+            "Begriffe, Anforderungen, Leistungsbedarf von Werkzeugmaschinen",
+            "Fertigungssysteme",
+            "Gestelle und Gestellbauteile von Werkzeugmaschinen",
+            "Steuerung von Werkzeugmaschinen",
+            "Spanende Werkzeugmaschinen",
+            "Umformende Werkzeugmaschinen",
+            "Führungen, und Abdeckungen von Führungen",
+            "Hauptspindeln und Antriebe von Werkzeugmaschinen"
+          ]
+        },
+        {
+          "name": "Werkzeugmaschinen, Labor",
+          "lehrende": "Prof. Dr. A. Sax",
+          "art": "LÜ",
+          "sws": 1,
+          "ects": 2,
+          "inhalt": [
+            "1. CNC Programmierung",
+            "2. Wirkungsgrade von Gewindetrieben (Trapez- und Kugelgewinde)",
+            "3. Messen der Geradheit und Rechtwinkligkeit an Tischen von Werkzeugmaschinen",
+            "4. Prüfen der Maschinengenauigkeit mit dem Kreisformtest",
+            "5. Beurteilung von Werkzeugmaschinen durch Bearbeitungstests"
+          ]
+        },
+        {
+          "name": "Betriebsfestigkeit",
+          "lehrende": "Prof. Dr. L. Boskovic",
+          "art": "V, Ü, PJ",
+          "sws": 2,
+          "ects": 3,
+          "inhalt": [
+            "erhalten eine Einführung in die Betriebsfestigkeit",
+            "lernen die Grundlagen der Schwingfestigkeit und Einflüsse auf diese kennen",
+            "lernen, welche Rolle die Kerbwirkung in der Betriebsfestigkeit spielt",
+            "lernen, unregelmäßige Beanspruchungen mithilfe von Schadensakkumulationshypothesen in der Bemessung zu berücksichtigen",
+            "lernen verschiedene rechnerische Betriebsfestigkeitsnachweise kennen",
+            "führen eigene Berechnungen mit einer Richtlinie für Festigkeitsnachweise durch und können diese interpretieren"
+          ]
+        },
+        {
+          "name": "Hydraulik und Pneumatik",
+          "lehrende": "D. Schorer",
+          "art": "V",
+          "sws": 2,
+          "ects": 2,
+          "inhalt": [
+            "Hydraulik: Grundlagen; Druckflüssigkeiten; Grafische Symbole; Anlagen; Hydropumpen und –motoren; Drehantriebe; Hydraulikzylinder; Schwenkantriebe; Wegeventile; Sperrventile; Druckventile; Stromventile; Hydrospeicher; Filter; Wärmetauscher; Ölbehälter; Leitungen und Verbindungen; Speicher-Lade-Systeme; Load-Sensing Systeme",
+            "Pneumatik: Grundlagen; Verweis auf Literatur"
+          ]
+        },
+        {
+          "name": "Dynamik technischer Systeme",
+          "lehrende": "Prof. Dr. B. Lege",
+          "art": "V",
+          "sws": 2,
+          "ects": 2,
+          "inhalt": [
+            "Freie und erzwungene Schwingungen von Ein- und Mehrmassenschwingern",
+            "Modalanalyse, Schwingungsanalyse",
+            "Modellbildung, Simulation",
+            "Schwingungsisolierung, -dämpfung und –tilgung"
+          ]
+        },
+        {
+          "name": "Tribologie und Korrosion",
+          "lehrende": "Prof. Dr.-Ing. V. Merklinger",
+          "art": "V",
+          "sws": 2,
+          "ects": 2,
+          "inhalt": [
+            "Reibung, Schmierung und Verschleiß von Lagern, Führungen, Getrieben, Motoren und anderen Maschinenelementen",
+            "Schmierstoffe",
+            "Oberflächenbehandlung und -beschichtung und Oberflächentopografie",
+            "Korrosionsprozesse, Korrosionsrate, Korrosionsarten",
+            "Korrosionsverhalten der verschiedenen Werkstoffe"
+          ]
+        }
+      ],
+      "literatur": []
+    },
+    "m22": {
+      "nr": "22",
+      "titel": "Wärme- und Stoffübertragung",
+      "kuerzel": "M22",
+      "semester": 6,
+      "typ": "PM",
+      "koordination": "Prof. Dr. L. Eicher",
+      "ects": 5,
+      "aufwand": "150 h",
+      "sws": 4,
+      "kontaktzeit": "60 h",
+      "selbststudium": "90 h",
+      "voraussetzung": "M2, M7, M9, M15",
+      "verwendbarkeit": {
+        "vorkenntnis": "—",
+        "kombination": "—"
+      },
+      "pruefung": {
+        "modulpruefung": "K90",
+        "modulteilpruefung": ""
+      },
+      "endnote": "Note der benoteten Modul(teil)prüfung",
+      "lernziele": [
+        "kennen die wesentlichen Prinzipien der Wärmeübertragung.",
+        "verstehen den Beitrag der thermischen Auslegung und Nachrechnung von Maschinen und processes im Kontext der Gesamtsystementwicklung.",
+        "können thermische Probleme im Maschinenbau identifizieren, beschreiben und lösen.",
+        "sind in der Lage die adäquaten Methoden zur thermischen Auslegung und Nachrechnung auszuwählen."
+      ],
+      "kompetenzReihenfolge": {
+        "fach": 1,
+        "methode": 2,
+        "sozial": 3
+      },
+      "teilmodule": [
+        {
+          "name": "Wärme- und Stoffübertragung",
+          "lehrende": "Prof. Dr. L. Eicher",
+          "art": "V, Ü",
+          "sws": 4,
+          "ects": 5,
+          "inhalt": [
+            "Stationäre und instationäre Wärmeleitung",
+            "Konvektive Wärmeübertragung",
+            "Wärmestrahlung",
+            "Berechnung von Wärmeübertragern"
+          ]
+        }
+      ],
+      "literatur": [
+        "Marek, Nitsche: Praxis der Wärmeübertragung: Grundlagen – Anwendungen – Übungsaufgaben, 4. Aufl., Hanser-Verlag; München; 2015",
+        "H.D. Baehr, K. Stephan: Wärme- und Stoffübertragung, 9. Aufl., Springer Verlag, Berlin, 2016",
+        "Y.A. Cengel: Introduction to Thermodynamics and Heat Transfer, 2. Aufl., McGraw-Hill, Columbus US, 2009"
+      ]
+    },
+    "m23": {
+      "nr": "23",
+      "titel": "Programmieren und Simulation",
+      "kuerzel": "M23",
+      "semester": 6,
+      "typ": "PM",
+      "koordination": "Prof. Dr. T. Hellmuth",
+      "ects": 5,
+      "aufwand": "150 h",
+      "sws": 4,
+      "kontaktzeit": "60 h",
+      "selbststudium": "90 h",
+      "voraussetzung": "Mathematik 1 & 2; Technische Mechanik 3; Regelungstechnik 1",
+      "verwendbarkeit": {
+        "vorkenntnis": "—",
+        "kombination": "—"
+      },
+      "pruefung": {
+        "modulpruefung": "SP",
+        "modulteilpruefung": "L"
+      },
+      "endnote": "—",
+      "lernziele": [
+        "kennen Fachbegriffe und Theorien der Modellbildung, Simulation und Programmierung sowie deren Anwendungen",
+        "kennen die Schnittstellen zu anderen Fachgebieten und können Verknüpfungen zu diesen herstellen",
+        "können gelerntes Wissen und Prinzipien der Modellbildung, Simulation und Programmierung in der technischen Praxis anwenden",
+        "sind in der Lage, geeignete Methoden zur Lösung von Problemen selbständig auszuwählen",
+        "ziehen vernünftige Schlüsse aus Simulationsergebnissen und können diese technisch interpretieren, wählen geeignete Methoden zur Problemlösung aus",
+        "sind in der Lage systematisch komplexe Programme und Modell mit Hilfe von Flow Charts, Programmierstrategien, Systemanalyse, Modellkalibrierung und –validierung zu entwickeln"
+      ],
+      "kompetenzReihenfolge": {
+        "fach": 1,
+        "methode": 2,
+        "sozial": 3
+      },
+      "teilmodule": [
+        {
+          "name": "Programmieren und Simulation, Theorie",
+          "lehrende": "Prof. Dr. T. Hellmuth / Prof. Dr. J. Weber / Prof. Dr. A. Basler",
+          "art": "V",
+          "sws": 2,
+          "ects": 2,
+          "inhalt": [
+            "Grundlagen der Numerik",
+            "grundlegende Datentypen, Operatoren und numerische Fehlerarten",
+            "Programmablauf-Konstrukte (Funktion, Verzweigung, Schleife)",
+            "Kommunikation mit Außenwelt (Ein- und Ausgabe von Zahlen und Text, Grafikerstellung, Dateioperationen) im pre- und postprocessing",
+            "numerisches Lösen von linearen und nichtlinearen Differenzialgleichungen und Differenzialgleichungssystemen",
+            "verschiedene solver-Verfahren und Einfluss der Schrittweite",
+            "strukturierte Systemsynthese und Beurteilung der Systemdynamik",
+            "Entwicklungsmethoden und UML",
+            "Fouriertransformation anwenden und interpretieren"
+          ]
+        },
+        {
+          "name": "Programmieren und Simulation, Übung",
+          "lehrende": "Prof. Dr. T. Hellmuth / Prof. Dr. J. Weber / Prof. Dr. A. Basler",
+          "art": "Ü",
+          "sws": 2,
+          "ects": 3,
+          "inhalt": [
+            "Modellbildung und Signalanalyse im Zeit-, Frequenz- und Zeit-Frequenz-Bereich",
+            "Modellbildung technischer und nichttechnischer dynamischer Systeme",
+            "Auswahl geeigneter Solver und Schrittweiten je Fragestellung",
+            "Bewertung und Analyse der Simulationsergebnisse"
+          ]
+        }
+      ],
+      "literatur": [
+        "Stoer: Numerische Mathematik 1+2; 9. Auflage; Springer 2005",
+        "H. R. Schwarz und N. Köckler: Numerische Mathematik; Teubner 2009",
+        "S. C. Chapra: Applied Numerical Methods with Python; McGraw-Hill, 2021",
+        "R. Johansson: Numerical Python: A Practical Techniques Approach for Industry; apress, 2015",
+        "T. L. Schmitt und M. Andres: Methoden zur Modellbildung und Simulation mechatronischer Systeme; Springer, 2023"
+      ]
+    },
+    "m24": {
+      "nr": "24",
+      "titel": "Elektrische Antriebe",
+      "kuerzel": "M24",
+      "semester": 6,
+      "typ": "PM",
+      "koordination": "Prof. Dr. U. Kosiedowski",
+      "ects": 5,
+      "aufwand": "150 h",
+      "sws": 4,
+      "kontaktzeit": "60 h",
+      "selbststudium": "90 h",
+      "voraussetzung": "Lineare DGL, physikalische Bewegungsgleichungen nach Newton, Begriff Massenträgheitsmoment, Aufstellen von DGL für Drehbewegungen, Gleichungen für Schaltelemente",
+      "verwendbarkeit": {
+        "vorkenntnis": "Projektarbeit 1, Projektarbeit 2, Bachelorarbeit",
+        "kombination": "Messtechnik, Regelungstechnik und Microcontroller-Programmierung"
+      },
+      "pruefung": {
+        "modulpruefung": "K90",
+        "modulteilpruefung": "SP"
+      },
+      "endnote": "—",
+      "lernziele": [
+        "die Aufgabenstellung für ein Antriebssystem und das Zusammenwirken von Antrieb und Last beschreiben",
+        "die verschiedenen Arten von Elektrischen Maschinen und ihre Anwendungsfelder unterscheiden",
+        "aus Kennlinien-Diagrammen von elektrischen Motoren quantitative Aussagen ableiten",
+        "aus Typenschildern und Datenblättern von Elektromotoren qualitative und quantitative Schlussfolgerungen ziehen",
+        "ein Antriebssystem, bestehend aus Frequenzumrichter, Motor und Getriebe, für eine gegebene Aufgabe auslegen"
+      ],
+      "kompetenzReihenfolge": {
+        "fach": 2,
+        "methode": 1,
+        "sozial": 3
+      },
+      "methodischeKompetenzen": [
+        "die Aufgabenstellung für ein Antriebssystem und das Zusammenwirken von Antrieb und Last beschreiben",
+        "zwischen stationärem und dynamischem Verhalten von Systemen und insbesondere elektrischen Antrieben unterscheiden",
+        "die verschiedenen Arten von Elektrischen Maschinen und ihre Anwendungsfelder unterscheiden",
+        "aus Kennlinien-Diagrammen von elektrischen Motoren quantitative Aussagen ableiten",
+        "aus Typenschildern und Datenblättern von Elektromotoren qualitative und quantitative Schlussfolgerungen ziehen",
+        "ein Antriebssystem, bestehend aus Frequenzumrichter, Motor und Getriebe, für eine gegebene Aufgabe auslegen"
+      ],
+      "teilmodule": [
+        {
+          "name": "Elektrische Antriebe",
+          "lehrende": "Prof. Dr. U. Kosiedowski",
+          "art": "V, Ü",
+          "sws": 2,
+          "ects": 3,
+          "inhalt": [
+            "physikalische Prinzipien",
+            "Bewegungsvorgänge",
+            "Zusammenwirken von Motor und Arbeitsmaschine",
+            "Kategorien von Elektrischen Maschinen",
+            "Prinzip, Aufbau, Kennlinien und mathematische Beschreibung von: Gleichstrommotor, Reihenschlussmotor, Asynchronmotor, Synchronmotor/Bürstenloser Gleichstrommotor, Schrittmotor",
+            "Frequenzumrichter, Umrichter in Kombination mit Elektrischen Maschinen, Kommutierungsvarianten"
+          ]
+        },
+        {
+          "name": "Elektrische Antriebe, Labor",
+          "lehrende": "Prof. Dr. U. Kosiedowski / B. Zumkehr",
+          "art": "LÜ",
+          "sws": 2,
+          "ects": 2,
+          "inhalt": [
+            "Laborversuche in Gruppen",
+            "Durchführung und Dokumentation von Experimenten",
+            "Koordinieren der Arbeiten innerhalb von Projektteams",
+            "Asynchronmotor",
+            "BLDC-Motor",
+            "Drehzahlregelung experimentell und simuliert"
+          ]
+        }
+      ],
+      "literatur": [
+        "Skript Elektrische Antriebe und begleitende Unterlagen in Moodle",
+        "Böhm, Werner: Elektrische Antriebe, 7. Aufl., Vogel Verlag, 2009, ISBN 978-3-8343-3145-8",
+        "Linse, Hermann: Elektrotechnik für Maschinenbauer, 14. Aufl. 2012, Springer",
+        "Fischer, Rolf: Elektrische Maschinen, 17. Aufl. 2017, Hanser Verlag, ISBN 978-3-446-45218-3"
+      ]
+    },
+    "m25": {
+      "nr": "25",
+      "titel": "Betriebswirtschaft",
+      "kuerzel": "M25",
+      "semester": 6,
+      "typ": "PM",
+      "koordination": "Prof. Dr. I. Fricker",
+      "ects": 5,
+      "aufwand": "150 h",
+      "sws": 4,
+      "kontaktzeit": "60 h",
+      "selbststudium": "90 h",
+      "voraussetzung": "Vorpraktikum, Praxissemester (Einblick in Industrieunternehmen)",
+      "verwendbarkeit": {
+        "vorkenntnis": "Bachelorarbeit bei entspr. Thema",
+        "kombination": "Produktionsmanagement, Industrielle Logistik"
+      },
+      "pruefung": {
+        "modulpruefung": "K90",
+        "modulteilpruefung": ""
+      },
+      "endnote": "Note der benoteten Modul(teil)prüfung",
+      "lernziele": [
+        "kennen und beherrschen die Kostentheorie des internen Rechnungswesens",
+        "können methodisch betriebswirtschaftliche Vorgänge und Prozesse strukturieren, bewerten und beurteilen",
+        "können kostenoptimale Entscheidungsvorlagen erarbeiten bzw. sind befähigt, solche Entscheidungen zu treffen",
+        "können die Betriebswirtschaftslehre als angewandte Wissenschaft einordnen",
+        "haben einen Überblick über die betriebliche Wertschöpfung",
+        "können Unternehmen als Teil der Wirtschaft einordnen",
+        "kennen Unterscheidungsmerkmale von Unternehmen",
+        "kennen grundlegende juristische Rahmenbedingungen",
+        "verstehen die Erfordernisse von Zielsetzung und Strategie in der Betriebswirtschaftslehre",
+        "können im betrieblichen Alltag Ziele ableiten und diese operationalisieren",
+        "können eine Bilanz, GuV und Kapitalflussrechnung einordnen und daraus Aussagen für die Unternehmensführung ableiten",
+        "können ein kohärentes Zielsystem durch operative Leistungskennzahlen ableiten",
+        "können Inhalte spezieller betriebswirtschaftlicher Disziplinen in einen Gesamtkontext einordnen",
+        "kennen Erfolgsfaktoren bei der fachbereichsübergreifenden Zusammenarbeit von Entwicklung, Beschaffung, Produktion, Vertrieb und Personal",
+        "kennen spezifische Methoden zur Lösung von kalkulatorischen Aufgabenstellungen in der Ingenieur-Praxis und beherrschen diese",
+        "wissen um die Grenzen der Anwendbarkeit und Aussagegenauigkeit der Verfahren und sind in der Lage, die relevanten Erkenntnisse aus der Anwendung der Methoden und Verfahren abzuleiten",
+        "verstehen Instrumente des Personalmanagements",
+        "übertragen Wissen auf Praxisbeispiele"
+      ],
+      "kompetenzReihenfolge": {
+        "fach": 1,
+        "methode": 2,
+        "sozial": 3
+      },
+      "teilmodule": [
+        {
+          "name": "Kostenrechnung und Betriebswirtschaftslehre",
+          "lehrende": "Prof. Dr. I. Fricker",
+          "art": "V",
+          "sws": 4,
+          "ects": 5,
+          "inhalt": [
+            "Einführung in die Betriebswirtschaftslehre",
+            "Wirtschaft und Unternehmen",
+            "Die betriebliche Wertschöpfung",
+            "Unternehmensziele, Strategie und Operationalisierung",
+            "Grundlagen der Finanz- und Leistungswirtschaft",
+            "Unternehmerische Planung",
+            "Management",
+            "Marketing",
+            "Personalmanagement",
+            "Organisation und Prozessmanagement",
+            "Kostenartenrechnung",
+            "Kostenstellenrechnung",
+            "Kostenträgerrechnung",
+            "statische und dynamische Verfahren der Wirtschaftlichkeitsrechnung"
+          ]
+        }
+      ],
+      "literatur": [
+        "Horsch, Jürgen; Kostenrechnung: Klassische und neue Methoden in der Unternehmenspraxis, 3. Auflage, Heidelberg, Springer Gabler, 2018",
+        "Coenenberg, Adolf; Fischer, Thomas; Kostenrechnung und Kostenanalyse, 9. Aufl., Schäffer Poeschel, Stuttgart, 2016",
+        "Eisele, Wolfgang; Knobloch, Alois; Technik des betrieblichen Rechnungswesens: Buchführung und Bilanzierung, Kosten- und Leistungsrechnung, Sonderbilanzen. 9. Aufl., München, Vahlen, 2018",
+        "Thommen et al.: Allgemeine Betriebswirtschaftslehre, 8. Aufl., Springer Gabler, 2017",
+        "In der Vorlesung verteiltes Skript; Hinweise auf weiterführende Literatur zu Beginn der Vorlesung"
+      ]
+    },
+    "m26-mk": {
+      "nr": "26",
+      "titel": "Vertiefung (MK) – Konstruktion / Produktentwicklung",
+      "kuerzel": "M26-MK",
+      "semester": 6,
+      "typ": "PM (Vertiefung)",
+      "koordination": "Prof. Dr. Dr. K. Heppler",
+      "ects": 20,
+      "aufwand": "600 h",
+      "sws": 17,
+      "kontaktzeit": "0 h",
+      "selbststudium": "600 h",
+      "voraussetzung": "—",
+      "verwendbarkeit": {
+        "vorkenntnis": "—",
+        "kombination": "—"
+      },
+      "pruefung": {
+        "modulpruefung": "",
+        "modulteilpruefung": "K90, S"
+      },
+      "endnote": "—",
+      "lernziele": [
+        "Die Absolventen vertiefen ihre Kenntnisse im Bereich der Konstruktionslehre und der virtuellen Produktentwicklung."
+      ],
+      "teilmodule": [
+        {
+          "name": "Konstruktionslehre und Maschinenelemente 3",
+          "lehrende": "Prof. J. Bauer / Prof. Dr. Dr. K. Heppler",
+          "art": "V",
+          "sws": 4,
+          "ects": 5,
+          "inhalt": [
+            "Bauformen und Ausführungskonstruktionen, Auslegung nach DIN bzw. Herstellerangaben und Verwendung in Maschinen/Apparate der Maschinenelemente:",
+            "Wälz- und Gleitlager",
+            "Achsen- und Wellenberechnung",
+            "Lager- und Wellendichtungen",
+            "Wellenkupplungen und Bremsen",
+            "Hülltriebe (Ketten, Riemen)",
+            "Geometrie der evolventenverzahnten Stirnräder"
+          ]
+        },
+        {
+          "name": "Trenn- und Fügetechnik 1",
+          "lehrende": "Prof. Dr. R. Winkler",
+          "art": "V",
+          "sws": 4,
+          "ects": 4,
+          "inhalt": [
+            "Trenn- und Fügetechnik 1 und 2 (mit Internationaler Schweißfachingenieurausbildung)",
+            "Schweißprozesse und -ausrüstung",
+            "Weitere Fügeverfahren wie Nieten, Chinchen, Flow Drill Schrauben",
+            "Metallische Werkstoffe und deren Verhalten beim Schweißen",
+            "Konstruktion und Berechnung (Schweißnahtberechnung, Gestaltung und Konstruktion geschweißter Verbindungen)",
+            "Beispiel und Anwendungen von modernen Fügeverfahren im Automobilleichtbau"
+          ]
+        },
+        {
+          "name": "Trenn- und Fügetechnik, Labor",
+          "lehrende": "Prof. Dr. R. Winkler",
+          "art": "LÜ",
+          "sws": 1,
+          "ects": 1,
+          "inhalt": []
+        },
+        {
+          "name": "Konstruktionslehre 4 / Produktentwicklungsseminar",
+          "lehrende": "Prof. Dr. Dr. K. Heppler",
+          "art": "Ü",
+          "sws": 4,
+          "ects": 5,
+          "inhalt": [
+            "Seminaristische Betrachtung des methodischen Produktentstehungsprozesses anhand individueller Beispiele von Neuentwicklungen in Kleingruppen:",
+            "Produkt Planen; QFD in der Produktplanung, Anforderungsliste",
+            "Produkt Konzipieren; Methoden der Lösungsfindung, Bewertungsmethoden, Morphologisches Schema, Stärkediagramm",
+            "Produkt Gestalten; Gestaltungsgrundregeln, festigkeitsgerechtes-, leichtbaugerechtes-, funktionsgerechtes-, normgerechtes-, produktionsgerechtes-Gestalten",
+            "Produkt Detaillieren; Baugruppenstruktur, Toleranzanalysen, fertigungs- und normgerechte Einzelteilzeichnungen",
+            "Produkt bauen; den Kleingruppen wird die Möglichkeit gegeben, das entwickelte Produkt als Projektarbeit selbst zu bauen",
+            "Einführung in die gewerblichen Schutzrechte; Arten von Schutzrechten, Recherchemöglichkeiten, Formulierung von Patentansprüchen",
+            "Seminar 1; Impulsvorträge in den Kleingruppen zu den Gestaltungsrichtlinien",
+            "Seminar 2; Vorstellung der Entwürfe zu den Projekten"
+          ]
+        },
+        {
+          "name": "Trenn- und Fügetechnik 2",
+          "lehrende": "Prof. Dr. R. Winkler",
+          "art": "V",
+          "sws": 4,
+          "ects": 4,
+          "inhalt": []
+        }
+      ],
+      "literatur": []
+    },
+    "m26-mm": {
+      "nr": "26",
+      "titel": "Vertiefung (MM) – Mechatronik, E-Mobilität, Fahrzeugtechnik",
+      "kuerzel": "M26-MM",
+      "semester": 6,
+      "typ": "PM (Vertiefung)",
+      "koordination": "Prof. Dr. A. Basler",
+      "ects": 20,
+      "aufwand": "600 h",
+      "sws": 16,
+      "kontaktzeit": "0 h",
+      "selbststudium": "600 h",
+      "voraussetzung": "—",
+      "verwendbarkeit": {
+        "vorkenntnis": "—",
+        "kombination": "—"
+      },
+      "pruefung": {
+        "modulpruefung": "",
+        "modulteilpruefung": "K90, SP, K90, B, PR"
+      },
+      "endnote": "—",
+      "lernziele": [
+        "verstehen die physikalischen und technischen Grundlagen der Fahrzeugdynamik und des Antriebsstrangs,",
+        "analysieren und bewerten Fahrwerkskomponenten, Bremssysteme und Antriebskonzepte,",
+        "wenden moderne Methoden der Künstlichen Intelligenz im Maschinenbau und darüber hinaus an,",
+        "arbeiten im Team und wenden agile Entwicklungsmethoden an,",
+        "führen experimentelle Untersuchungen an Antriebskomponenten und Fahrwerken durch,",
+        "werten Messdaten aus und interpretieren diese im Kontext der Fahrzeugtechnik."
+      ],
+      "kompetenzReihenfolge": {
+        "fach": 1,
+        "methode": 2,
+        "sozial": 3
+      },
+      "teilmodule": [
+        {
+          "name": "Fahrzeugtechnik",
+          "lehrende": "Prof. Dr. A. Basler",
+          "art": "V",
+          "sws": 4,
+          "ects": 5,
+          "inhalt": [
+            "Längsdynamik: Fahrwiderstände, Verbrauch, Zugkraftdiagramm",
+            "Komponenten des Triebstrangs",
+            "Mechanik der Antriebskräfte: Schwerpunkt, Achslastverteilung, Antriebsgrenzen FWD/RWD/AWD",
+            "Mechanik der Bremskräfte: Bremsstabilität, Bremskraftverteilung, Aufbau Bremssystem, ABS/ESP",
+            "Querdynamik: Lenkungen, Reifentechnik, Kraftschluss, Kurvenfahrt, Einspurmodell",
+            "Vertikaldynamik: Kenngrößen am Rad, Federn und Dämpfer, ausgeführte Fahrwerke",
+            "Komponenten des Fahrwerks",
+            "Kinematik und Arten von Radaufhängungen"
+          ]
+        },
+        {
+          "name": "KI im Maschinenbau",
+          "lehrende": "Prof. Dr. T. Hellmuth",
+          "art": "V",
+          "sws": 4,
+          "ects": 5,
+          "inhalt": [
+            "Die Lehrveranstaltung vermittelt Wissen und Fähigkeiten, die für die Umsetzung von ausgewählten KI Projekten benötigt werden.",
+            "Software-Entwicklungsprozesse: Softwareentwicklungsprozesse, Team-Management (Scrum und Co), Beispielprojekte: Verwende gitlab für agile Softwareentwicklung",
+            "Computer-Hardware: Elemente einer Zentraleinheit (CPU) (Pipelines, Caches,…), PC-Architektur (CPU-Umgebungen), Vergleiche eine CPU gegen einen Grafikprozessor GPU, Neuronaler Netzbeschleuniger / Tensor Processing Unit",
+            "Algorithmen aus der Künstliche Intelligenz: Lineare Regression, Ausgewählte Methoden der numerischen Optimierung, Klassifizierung, Computer Vision, Sprachverarbeitung"
+          ]
+        },
+        {
+          "name": "Antrieb und Energieversorgung in Fahrzeugen",
+          "lehrende": "Prof. Dr. A. Basler",
+          "art": "V, Ü",
+          "sws": 4,
+          "ects": 5,
+          "inhalt": [
+            "Ganzheitliche Vermittlung von Kenntnissen zu Antriebstechnologien für Fahrzeuge",
+            "Die einzelnen Technologien werden hinsichtlich ihrer individuellen Vor- und Nachteile sowie ökologischer cradle-to-grave-Aspekte diskutiert",
+            "Grundlagen der Verbrennungsmotoren für Fahrzeuge",
+            "Grundlagen Elektrischer Antriebe",
+            "Energiespeicherung in Fahrzeugen mit Batterien und Wasserstoff",
+            "Arten von Hybridantriebe und deren Vor- und Nachteile",
+            "Wirkungsgradketten und ganzheitliche Bewertung der Antriebstechnologien hinsichtlich Ökonomie und Ökologie"
+          ]
+        },
+        {
+          "name": "Fahrzeugtechnik und Antriebstechnik, Labor",
+          "lehrende": "Prof. Dr. A. Basler",
+          "art": "LÜ",
+          "sws": 4,
+          "ects": 5,
+          "inhalt": [
+            "Komponenten des Antriebs und das Gesamtfahrzeug messtechnisch charakterisieren und spezifische Parameter und Eigenschaften ermitteln und analysieren",
+            "Elektrische Charakterisierung von Batteriezellen",
+            "Kennfelder am Motorprüfstand ermitteln",
+            "Ausrollversuche zur Ermittlung des äußeren Fahrwiderstands und der Fahrwiderstandskoeffizienten",
+            "Durchführung von Kfz- und Motorraduntersuchungen auf Gesamtfahrzeug-Rollenprüfständen hinsichtlich Energie- und Leistungsbedarf",
+            "Optische Fahrwerksvermessung zur Ermittlung kinematisch wichtiger Größen",
+            "Vermessung von Federkennlinien in Abh. des Beladungszustandes",
+            "Schwerpunktsermittlung durch Wägung",
+            "Kennenlernen des Antriebstrangs von Fahrzeugen mit konventionellen und alternativen Antrieben",
+            "Programmieren peripherer Steuergeräte",
+            "Messdatenauswertung und -analyse"
+          ]
+        }
+      ],
+      "literatur": []
+    },
+    "m26-me": {
+      "nr": "26",
+      "titel": "Vertiefung (ME) – Energietechnik",
+      "kuerzel": "M26-me",
+      "semester": 6,
+      "typ": "PM (Vertiefung)",
+      "koordination": "Prof. Dr. A. Lohmberg",
+      "ects": 20,
+      "aufwand": "600 h",
+      "sws": 16,
+      "kontaktzeit": "0 h",
+      "selbststudium": "600 h",
+      "voraussetzung": "Thermodynamik, Strömungslehre",
+      "verwendbarkeit": {
+        "vorkenntnis": "—",
+        "kombination": "Wärme- und Stoffübertragung"
+      },
+      "pruefung": {
+        "modulpruefung": "",
+        "modulteilpruefung": "K90, HA, R, K90, SP, SP, T, LP"
+      },
+      "endnote": "ECTS-gewichtetes, arithmetisches Mittel der benoteten Modulteilprüfungen",
+      "lernziele": [
+        "Bezogen auf Strömungsmaschinen mit Labor: verfügen über vertiefte Kenntnisse in Thermodynamik und Strömungsmechanik mit dem Fokus auf der Anwendung bei Strömungsmaschinen",
+        "sind fähig das Zusammenspiel von Maschinen und Anlagen zu beurteilen und zu optimieren",
+        "können Strömungsmaschinen beurteilen, optimieren und auslegen",
+        "kennen Auslegungsverfahren und Ihre Grenzen und können geeignete Messtechnik wählen, um Strömungsmaschinen zu untersuchen",
+        "können vorhandene Auslegungstools verbessern und neue erstellen",
+        "können Messungen auswerten, beurteilen und Maschinen auf dieser Basis optimieren",
+        "können den Energiebedarf von Anlagen optimieren und Maschine und Anlage optimal aufeinander abstimmen",
+        "können sich in jede Art von Strömungsmaschine rasch einarbeiten und das vorhandene Wissen erweitern",
+        "kennen die Problematik der effizienten Energiewandlung und der zukünftigen Energieversorgung und kann Neuerungen beurteilen",
+        "können eine Laborgruppe führen und Ergebnisse präsentieren",
+        "können im Laborteam mit anderen zusammenarbeiten",
+        "können Energieumwandlungsvorgänge vor dem Hintergrund der Nachhaltigkeit beurteilen und diskutieren",
+        "Bezogen auf Regenerative Energietechnik und Energiesysteme/Systemsimulation: kennen die wichtigsten Technologien der erneuerbaren Energien",
+        "versteht Energiesysteme und deren Komponenten, sowie ist in der Lage Komponenten mathematisch zu beschreiben und somit Systeme zu modellieren und berechnen",
+        "kennen die verschiedenen erneuerbaren Energien und kann deren Wirkung auf die Umwelt bewerten",
+        "verstehen den Unterschied zwischen Primärenergieverbrauch und Stromverbrauch",
+        "können die Interaktion verschiedener Komponenten in Energiesystemen interpretieren",
+        "können aus Grundlagen z.B. der Thermodynamik Modelle einzelner Bauteile oder Komponenten erstellen und zu einem System zusammenführen und dieses berechnen",
+        "können die verschiedenen Simulationswerkzeuge und kann das Wissen und die Simulation anhand von Modelica umsetzen",
+        "kennen die Grundlagen von Modelica und kann damit komplexe Energiesysteme lösen",
+        "können die Problematik der Energieversorgung erkennen und argumentativ diskutieren",
+        "verstehen, dass aufgrund der Herausforderungen in der Energietechnik ein ständiges (kennen-) lernen von aktuellen Technologien und deren Wirkungsweisen auf die Umwelt notwendig ist",
+        "Bezogen auf numerische Strömungssimulationen: kennen die Hintergründe der Strömungssimulationen und die möglichen Fehler und Unsicherheiten",
+        "sind fähig, aus Simulationen interessierende Größen zu bestimmen, zu interpretieren und Schlüsse zu ziehen",
+        "sind fähig, eine geeignete Modellierung zu wählen und kennen die „Fallstricke“ bei Simulationen",
+        "können die Ergebnisse seiner Rechnungen geeignet schriftlich und mündlich präsentieren"
+      ],
+      "teilmodule": [
+        {
+          "name": "Strömungsmaschinen",
+          "lehrende": "Prof. Dr. A. Lohmberg",
+          "art": "V",
+          "sws": 3,
+          "ects": 4,
+          "inhalt": [
+            "Wiederholung und Erweiterung der Grundlagen der Strömungslehre",
+            "gemeinsame Grundlagen der Strömungsmaschinen: Schaufelgitter, Geschwindigkeitsdreiecke, Prinzip der Energieumsetzung in Strömungsmaschinen",
+            "Ähnlichkeit und Kennzahlen, Kennlinien von Anlage und Maschine",
+            "Regelung von Maschinen",
+            "Kavitation und Überschall",
+            "Grundlagen der Strömungsmaschinen für kompressible und inkompressible Medien",
+            "Entwurfsprinzipien der Laufräder und von Komponenten verschiedener Strömungsmaschinenbauarten",
+            "Arten von Maschinen: Pumpen, Ventilatoren, Wasserturbinen, Windturbinen, Verdichter, Dampfturbinen, Gasturbinen"
+          ]
+        },
+        {
+          "name": "Strömungsmaschinen, Labor",
+          "lehrende": "Prof. Dr. A. Lohmberg",
+          "art": "LÜ",
+          "sws": 1,
+          "ects": 1,
+          "inhalt": [
+            "Laborversuche zu Kennlinien von Maschine und Anlage, Regelung, Kavitation u.a. an Pelton-Turbine, Axial-/Radialventilator und Pumpe"
+          ]
+        },
+        {
+          "name": "Energiesysteme und Systemsimulation mit Übungen",
+          "lehrende": "Prof. Dr. P. Stein",
+          "art": "V, Ü",
+          "sws": 4,
+          "ects": 5,
+          "inhalt": [
+            "Energiesysteme, Aufbau, Wirkungsweise, Auslegung",
+            "Grundlagen der Anlagenbilanzierung",
+            "Modellierung von Anlagenkomponenten",
+            "Simulation von Energiesystemen mit Modelica: Programmaufbau/Struktur, Erstellen eigener Bibliotheken, Verwendung externer Bibliotheken, Berechnung und Analyse von Anlagen und Prozessen"
+          ]
+        },
+        {
+          "name": "Regenerative Energietechnik mit Laborübungen",
+          "lehrende": "Prof. Dr. P. Stein",
+          "art": "V, Ü",
+          "sws": 4,
+          "ects": 5,
+          "inhalt": [
+            "Grundlagen (Begriffe, Kennzahlen, Erzeugung und Verbrauchsdaten, aktuelle Entwicklung)",
+            "Solartechnik (Solarthermie, Photovoltaik)",
+            "Geothermie",
+            "Wasserstoff, Elektrolyse und Brennstoffzellen",
+            "Wärmepumpen",
+            "evtl. Wasserkraft",
+            "evtl. Biogas",
+            "Laborübungen: Wärmepumpe, Wärmeübertrager, Wasserstoff (Elektrolyse/Brennstoffzelle)"
+          ]
+        },
+        {
+          "name": "Numerische Strömungssimulation (CFD), Übung",
+          "lehrende": "Prof. Dr. A. Lohmberg",
+          "art": "Ü",
+          "sws": 3,
+          "ects": 4,
+          "inhalt": [
+            "eigenständiges (aber betreutes) projektbezogenes Arbeiten der Studierenden anhand komplexerer ingenieurwissenschaftlicher Beispiele",
+            "Strömungstechnische Analyse und Optimierung",
+            "Untersuchung von Fehlern und Unsicherheiten"
+          ]
+        },
+        {
+          "name": "Numerische Strömungssimulation (CFD), Theorie",
+          "lehrende": "Prof. Dr. A. Lohmberg",
+          "art": "V, Ü",
+          "sws": 1,
+          "ects": 1,
+          "inhalt": [
+            "Einführung in ANSYS-CFX, anhand von Beispielen für Innen- und Außenströmungen",
+            "Erhaltungsgleichungen und Modelle der Strömungsmechanik (Navier-Stokes und RANS-Gleichungen, Turbulenz, Wandbehandlung)",
+            "Diskretisierung",
+            "Netzerstellung, Netzqualität",
+            "Randbedingungen und Interfaces",
+            "Fehler und Unsicherheiten"
+          ]
+        }
+      ],
+      "literatur": [
+        "Sigloch, Herbert: Strömungsmaschinen: Grundlagen und Anwendungen, 6. Aufl., Hanser Verlag, München, 2024",
+        "Bohl, Willi: Strömungsmaschinen – 1 Aufbau und Wirkungsweise, 13. Aufl., Vogel Verlag, München, 2013",
+        "Menny, K.: Hydraulische und thermische Kraft- und Arbeitsmaschinen, Springer 2006",
+        "Gülich, J. F.: Kreiselpumpen, 4. Auflage, Springer Vieweg 2020",
+        "R. Zahoransky „Energietechnik“, 7. Auflage",
+        "Wesselak V. „Handbuch Regenerative Energietechnik“",
+        "Strauss K. „Kraftwerkstechnik“",
+        "Rönsch S. „Anlagenbilanzierung in der Energietechnik“",
+        "Lecheler, S.: Numerische Strömungsberechnung, Springer Vieweg, 2023",
+        "Schwarze, R.: CFD-Modellierung, Springer, 2013"
+      ]
+    },
+    "m26-mp": {
+      "nr": "26",
+      "titel": "Vertiefung (MP) – Produktion",
+      "kuerzel": "M26-MP",
+      "semester": 6,
+      "typ": "PM (Vertiefung)",
+      "koordination": "Prof. Dr. I. Fricker",
+      "ects": 20,
+      "aufwand": "600 h",
+      "sws": 17,
+      "kontaktzeit": "0 h",
+      "selbststudium": "600 h",
+      "voraussetzung": "—",
+      "verwendbarkeit": {
+        "vorkenntnis": "—",
+        "kombination": "—"
+      },
+      "pruefung": {
+        "modulpruefung": "",
+        "modulteilpruefung": "T"
+      },
+      "endnote": "—",
+      "lernziele": [
+        "Absolventen sind in der Lage, praktische Probleme auf dem Gebiet der Produktions- und Fertigungstechnik effizient zu bearbeiten. Sie verfügen dazu über das notwendige Wissen, beherrschen praxistaugliche Werkzeuge und Methoden und können diese bei der Bearbeitung konkreter Fragestellungen zielgerichtet einsetzen. Die Studierenden erweitern ihr Wissen im Bereich moderner Inhalte wie Digitalisierung und additiver Fertigungsverfahren."
+      ],
+      "teilmodule": [
+        {
+          "name": "Produktionsmanagement",
+          "lehrende": "Prof. Dr. I. Fricker",
+          "art": "V",
+          "sws": 2,
+          "ects": 2,
+          "inhalt": [
+            "Ziele der Produktion, Produktionsprogrammplanung",
+            "Technologie- und Arbeitsplanung, Zeitwirtschaft",
+            "Materialwirtschaft und Disposition",
+            "Produktionsplanung und -steuerung",
+            "Wertstrommanagement und Lean Production",
+            "Supply-Chain-Management"
+          ]
+        },
+        {
+          "name": "Fabrikplanung",
+          "lehrende": "Prof. Dr. I. Fricker",
+          "art": "V",
+          "sws": 2,
+          "ects": 3,
+          "inhalt": [
+            "Fabrikplanungsprozess",
+            "Strukturplanung",
+            "Fertigungssystemplanung",
+            "Montagesystemplanung",
+            "Layoutplanung",
+            "Gebäude- und Werkstrukturplanung",
+            "Standortauswahl"
+          ]
+        },
+        {
+          "name": "Trenn- und Fügetechnik 1",
+          "lehrende": "Prof. Dr. R. Winkler",
+          "art": "V",
+          "sws": 4,
+          "ects": 4,
+          "inhalt": [
+            "Trenn- und Fügetechnik 1 und 2 (mit Internationaler Schweißfachingenieurausbildung)",
+            "Schweißprozesse und -ausrüstung",
+            "Weitere Fügeverfahren wie Nieten, Chinchen, Flow Drill Schrauben",
+            "Metallische Werkstoffe und deren Verhalten beim Schweißen",
+            "Konstruktion und Berechnung (Schweißnahtberechnung, Gestaltung und Konstruktion geschweißter Verbindungen)",
+            "Beispiel und Anwendungen von modernen Fügeverfahren im Automobilleichtbau"
+          ]
+        },
+        {
+          "name": "Trenn- und Fügetechnik, Labor",
+          "lehrende": "Prof. Dr. R. Winkler",
+          "art": "LÜ",
+          "sws": 1,
+          "ects": 1,
+          "inhalt": []
+        },
+        {
+          "name": "Materialflussrechnung",
+          "lehrende": "Prof. Dr. I. Fricker",
+          "art": "V",
+          "sws": 2,
+          "ects": 3,
+          "inhalt": [
+            "Modellieren von Materialflusssystemen",
+            "Durchsatzberechnung von Stetigförderern",
+            "Durchsatzberechnung von Unstetigförderern",
+            "Stochastische Materialflussrechnung",
+            "Warte- und Bediensysteme",
+            "Wegfindungsalgorithmen",
+            "Dynamische Materialflussrechnung"
+          ]
+        },
+        {
+          "name": "Materialflusssysteme",
+          "lehrende": "Prof. Dr. I. Fricker",
+          "art": "V",
+          "sws": 2,
+          "ects": 2,
+          "inhalt": [
+            "Materialflusssysteme in Unternehmen",
+            "Planen und Gestalten von Materialflusssystemen",
+            "Stetigförderer",
+            "Unstetigförderer",
+            "Verpackung, Lastaufnahmemittel, Ladehilfsmittel",
+            "Lagersysteme",
+            "Kommissionieren und Bereitstellen",
+            "Distribution",
+            "Warehouse-Management-Systeme"
+          ]
+        },
+        {
+          "name": "Trenn- und Fügetechnik 2",
+          "lehrende": "Prof. Dr. R. Winkler",
+          "art": "V",
+          "sws": 4,
+          "ects": 4,
+          "inhalt": []
+        }
+      ],
+      "literatur": []
+    },
+    "m30": {
+      "nr": "30",
+      "titel": "Projektarbeit 2",
+      "kuerzel": "M30",
+      "semester": 7,
+      "typ": "PM",
+      "koordination": "Prof. J. Bauer",
+      "ects": 6,
+      "aufwand": "180 h",
+      "sws": 0,
+      "kontaktzeit": "0 h",
+      "selbststudium": "180 h",
+      "voraussetzung": "Lehrveranstaltungen der ersten 6 Semester",
+      "verwendbarkeit": {
+        "vorkenntnis": "Bachelorarbeit",
+        "kombination": "—"
+      },
+      "pruefung": {
+        "modulpruefung": "SP",
+        "modulteilpruefung": ""
+      },
+      "endnote": "Note der benoteten Modul(teil)prüfung",
+      "lernziele": [
+        "wenden gelerntes Wissen und Prinzipien in der Praxis korrekt und sachgerecht an",
+        "erarbeiten selbständig neues Wissen"
+      ],
+      "kompetenzReihenfolge": {
+        "fach": 1,
+        "methode": 2,
+        "sozial": 3
+      },
+      "methodischeKompetenzen": [
+        "planen Projekte systematisch und strukturiert und führen sie ergebnisorientiert durch",
+        "zeigen über freie Themenwahl ihre entwickelte Fähigkeit, den Schwierigkeitsgrad der Lösbarkeit von Problemen selbst einzuschätzen",
+        "bewerten verschiedene Methoden und begründen die Auswahl geeigneter Methoden zur Lösung von Problemen",
+        "schreiben sprachlich präzise und sachlich korrekte Texte und halten ebensolche Vorträge",
+        "strukturieren Texte und Vorträge sinnvoll und adressatengerecht"
+      ],
+      "personaleKompetenzen": [
+        "kooperieren auch in kritischen Situationen konfliktlösend in Teams",
+        "zeigen durch Beachtung der Richtlinien von Anweisungen, Instruktionen und Planungen ein entwickeltes Arbeits- und Selbstmanagement"
+      ],
+      "teilmodule": [
+        {
+          "name": "Projektarbeit 2",
+          "lehrende": "Professor*innen der Fakultät MA",
+          "art": "PJ",
+          "sws": 0,
+          "ects": 6,
+          "inhalt": [
+            "Die Lehrinhalte werden durch das jeweilige Projekt bestimmt",
+            "Die Projekte werden teilweise in Teams durchgeführt"
+          ]
+        }
+      ],
+      "literatur": []
+    },
+    "m31": {
+      "nr": "31",
+      "titel": "Bachelorarbeit",
+      "kuerzel": "M31",
+      "semester": 7,
+      "typ": "PM",
+      "koordination": "Prof. J. Bauer",
+      "ects": 12,
+      "aufwand": "360 h",
+      "sws": 0,
+      "kontaktzeit": "0 h",
+      "selbststudium": "360 h",
+      "voraussetzung": "Alle Module bis zum 5. Semester einschließlich abgeschlossen zwingend. Module der Semester 6 und 7 dringend empfohlen",
+      "verwendbarkeit": {
+        "vorkenntnis": "—",
+        "kombination": "—"
+      },
+      "pruefung": {
+        "modulpruefung": "",
+        "modulteilpruefung": ""
+      },
+      "endnote": "Gemittelte Note der Betreuer",
+      "lernziele": [
+        "erarbeiten selbständig und nach wissenschaftlichen Methoden eine Lösung zu einem komplexen Problem aus dem Bereich Maschinenbau"
+      ],
+      "kompetenzReihenfolge": {
+        "fach": 1,
+        "methode": 2,
+        "sozial": 3
+      },
+      "methodischeKompetenzen": [
+        "ordnen den Umfang und die Relevanz ihrer Ergebnisse im wissenschaftlichen bzw. industriellen Kontext ein",
+        "verfassen einen sprachlich präzisen, sachlich korrekten, strukturierten und adressatengerechten Text"
+      ],
+      "personaleKompetenzen": [
+        "zeigen hochentwickeltes Arbeits- und Selbstmanagement durch selbständige Organisation und eigenständiges Einfordern von Rückmeldungen bei den Betreuern",
+        "kommunizieren passend mit den Betreuern"
+      ],
+      "teilmodule": [
+        {
+          "name": "Bachelorarbeit",
+          "lehrende": "Professor*innen der Fakultät MA",
+          "art": "o",
+          "sws": 0,
+          "ects": 12,
+          "inhalt": []
+        }
+      ],
+      "literatur": []
+    }
+  },
+  "SEMESTER_STRUKTUR": [
+    {
+      "nr": 1,
+      "titel": "1. Semester",
+      "module": ["m1", "m2", "m3", "m4", "m5", "m6"]
+    },
+    {
+      "nr": 2,
+      "titel": "2. Semester",
+      "module": ["m7", "m8", "m9", "m10", "m11", "m12"]
+    },
+    {
+      "nr": 3,
+      "titel": "3. Semester",
+      "module": ["m13", "m14", "m15", "m16", "m17", "m18"]
+    },
+    {
+      "nr": 4,
+      "titel": "4. Semester (Praxis)",
+      "module": ["m19"],
+      "hinweis": "Integriertes Praxissemester"
+    },
+    {
+      "nr": 5,
+      "titel": "5. Semester",
+      "module": ["m20", "m21", "m27", "m28", "m29"],
+      "hinweis": "Inkl. Wahlpflichtbereich (M27)"
+    },
+    {
+      "nr": 6,
+      "titel": "6. Semester (Vertiefung)",
+      "module": ["m22", "m23", "m24", "m25", "m26-mk", "m26-mm", "m26-me", "m26-mp"],
+      "hinweis": "Wähle EINE der 4 Vertiefungsrichtungen (M26)"
+    },
+    {
+      "nr": 7,
+      "titel": "7. Semester",
+      "module": ["m30", "m31"]
+    }
+  ],
+  "DEPENDENCY_MAP": {
+    "m10": ["m4", "m2", "m3"],
+    "m11": ["m10"],
+    "m12": ["m3"],
+    "m13": ["m4", "m2", "m7", "m8"],
+    "m14": ["m4", "m10", "m5", "m11"],
+    "m15": ["m8"],
+    "m16": ["m2", "m7", "m8"],
+    "m18": ["m2"],
+    "m19": ["m1", "m2", "m3", "m4", "m5", "m6", "m7", "m8", "m9", "m10", "m11", "m12"],
+    "m20": ["m17", "m7", "m13"], 
+    "m21": ["m8", "m16"],
+    "m22": ["m2", "m7", "m9", "m15"],
+    "m23": ["m2", "m7", "m13", "m20"],
+    "m24": ["m16", "m20", "m7", "m13"],
+    "m25": ["m19"],
+    "m26-me": ["m15", "m9"],
+    "m28": ["m1", "m2", "m3", "m4", "m5", "m6", "m7", "m8", "m9", "m10", "m11", "m12", "m13", "m14", "m15", "m16", "m17", "m18"],
+    "m30": ["m1", "m2", "m3", "m4", "m5", "m6", "m7", "m8", "m9", "m10", "m11", "m12", "m13", "m14", "m15", "m16", "m17", "m18", "m19", "m20", "m21", "m22", "m23", "m24", "m25", "m27"],
+    "m31": ["m1", "m2", "m3", "m4", "m5", "m6", "m7", "m8", "m9", "m10", "m11", "m12", "m13", "m14", "m15", "m16", "m17", "m18", "m19", "m20", "m21", "m27", "m28", "m29"]
+  }
+}
