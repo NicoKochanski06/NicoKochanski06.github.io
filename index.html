@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Studienverlauf Maschinenbau (MAB) - HTWG Konstanz</title>
+    <title>Modulhandbuch MAB - HTWG Konstanz</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
@@ -11,192 +11,837 @@
             --htwg-teal: hwb(219 50% 11%); 
             --htwg-teal-light: rgba(20, 184, 166, 0.15);
             --htwg-teal-glow: rgba(20, 184, 166, 0.3);
+            
             --bg-color: #0f172a;       
             --col-bg: #1e293b;         
             --card-bg: #334155;        
             --modal-bg: #0f172a;       
+            
             --text-main: #f8fafc;      
             --text-muted: #cbd5e1;     
             --text-dim: #94a3b8;       
+            
             --border-color: #475569;   
         }
 
-        body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-main); margin: 0; }
-
-        header {
-            background-color: rgba(15, 23, 42, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-            padding: 25px 40px; text-align: center; border-bottom: 1px solid var(--border-color); position: sticky; top: 0; z-index: 100;
+        body {
+            font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
         }
 
-        header h1 { margin: 0 0 8px 0; font-size: 26px; font-weight: 700; }
-        header p { margin: 0; color: var(--htwg-teal); font-weight: 500; font-size: 15px; }
+        header {
+            background-color: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            color: var(--text-main);
+            padding: 25px 40px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
 
+        header h1 {
+            margin: 0 0 8px 0;
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            margin: 0;
+            color: var(--htwg-teal);
+            font-weight: 500;
+            font-size: 15px;
+        }
+
+        /* NEU: User Panel im Header */
         .user-panel {
-            position: absolute; top: 20px; left: 20px; display: flex; gap: 10px; align-items: center;
+            position: absolute;
+            top: 25px;
+            left: 40px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            z-index: 105;
         }
 
         .user-badge {
-            background: rgba(0,0,0,0.3); border: 1px solid var(--border-color); padding: 6px 12px; border-radius: 20px; font-size: 13px; color: var(--htwg-teal); font-weight: 600;
+            background: rgba(0,0,0,0.3);
+            border: 1px solid var(--border-color);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            color: var(--htwg-teal);
+            font-weight: 600;
         }
 
         .btn-small {
-            background: var(--col-bg); border: 1px solid var(--border-color); color: var(--text-muted); padding: 6px 12px; border-radius: 20px; cursor: pointer; font-size: 12px; transition: 0.2s;
+            background: var(--col-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            padding: 6px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: 0.2s;
         }
-        .btn-small:hover { background: var(--htwg-teal); color: #000; border-color: var(--htwg-teal); }
-
-        .controls { display: flex; gap: 15px; justify-content: center; align-items: center; margin-top: 20px; flex-wrap: wrap; }
-        .search-box { padding: 10px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: rgba(0,0,0,0.2); color: var(--text-main); width: 280px; outline: none; }
-        .search-box:focus { border-color: var(--htwg-teal); box-shadow: 0 0 0 3px var(--htwg-teal-light); }
-        .filter-btn { padding: 9px 18px; border-radius: 20px; background: var(--col-bg); border: 1px solid var(--border-color); color: var(--text-muted); cursor: pointer; }
-        .filter-btn.active { background: var(--htwg-teal); color: #000; font-weight: 600; border-color: var(--htwg-teal); }
-
-        .board { display: flex; overflow-x: auto; padding: 30px 40px; gap: 25px; align-items: flex-start; min-height: calc(100vh - 120px); }
-        .semester-col { background-color: var(--col-bg); border: 1px solid var(--border-color); border-radius: 12px; min-width: 340px; max-width: 340px; padding: 20px; display: flex; flex-direction: column; gap: 16px; }
         
-        .sem-header { text-align: center; border-bottom: 2px solid var(--htwg-teal); padding-bottom: 10px; margin-bottom: 5px; }
-        .sem-header h2 { margin: 0; font-size: 18px; color: var(--text-main); }
-        .avg-badge { display: inline-block; margin-top: 8px; background: rgba(20, 184, 166, 0.15); color: var(--htwg-teal); padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: bold; border: 1px solid rgba(20, 184, 166, 0.3); }
+        .btn-small:hover {
+            background: var(--htwg-teal);
+            color: #000;
+            border-color: var(--htwg-teal);
+        }
 
-        .module-card { background-color: var(--card-bg); border-left: 4px solid var(--htwg-teal); border-radius: 8px; padding: 18px; cursor: pointer; transition: all 0.25s ease; position: relative; }
-        .module-card:hover { transform: translateY(-4px); background-color: #3f4f66; box-shadow: 0 12px 20px -5px var(--htwg-teal-glow); }
+        .disclaimer {
+            font-size: 13px;
+            color: #fca5a5;
+            background: rgba(239, 68, 68, 0.1);
+            padding: 12px 20px;
+            border-radius: 8px;
+            margin: 15px auto 0 auto;
+            max-width: 800px;
+            text-align: center;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            line-height: 1.4;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: var(--text-dim);
+            margin-top: 6px;
+        }
+
+        .controls {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .search-box {
+            padding: 10px 16px;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            background: rgba(0,0,0,0.2);
+            color: var(--text-main);
+            width: 280px;
+            outline: none;
+            font-family: inherit;
+            transition: all 0.2s;
+        }
+
+        .search-box:focus {
+            border-color: var(--htwg-teal);
+            box-shadow: 0 0 0 3px var(--htwg-teal-light);
+        }
+
+        .filter-btn {
+            padding: 9px 18px;
+            border-radius: 20px;
+            background: var(--col-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.2s;
+        }
+
+        .filter-btn:hover { background: #334155; }
+        .filter-btn.active {
+            background: var(--htwg-teal);
+            color: #000;
+            font-weight: 600;
+            border-color: var(--htwg-teal);
+        }
+
+        .board {
+            display: flex;
+            overflow-x: auto;
+            padding: 30px 40px;
+            gap: 25px;
+            align-items: flex-start;
+            min-height: calc(100vh - 120px);
+            transition: background 0.3s;
+        }
+
+        .semester-col {
+            background-color: var(--col-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            min-width: 340px;
+            max-width: 340px;
+            padding: 20px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.15);
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            transition: opacity 0.3s;
+        }
+
+        /* NEU: Semester Header für Notendurchschnitt */
+        .sem-header {
+            text-align: center;
+            border-bottom: 2px solid var(--htwg-teal);
+            padding-bottom: 10px;
+            margin-bottom: 5px;
+        }
+
+        .sem-header h2 {
+            margin: 0;
+            font-size: 18px;
+            color: var(--text-main);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .avg-badge {
+            display: inline-block;
+            margin-top: 8px;
+            background: rgba(20, 184, 166, 0.15);
+            color: var(--htwg-teal);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+            border: 1px solid rgba(20, 184, 166, 0.3);
+        }
+
+        .hinweis-text {
+            font-size: 13px;
+            color: var(--text-dim);
+            text-align: center;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            line-height: 1.4;
+            font-style: italic;
+        }
+
+        .module-card {
+            background-color: var(--card-bg);
+            border-left: 4px solid var(--htwg-teal);
+            border-top: 1px solid transparent;
+            border-right: 1px solid transparent;
+            border-bottom: 1px solid transparent;
+            border-radius: 8px;
+            padding: 18px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: all 0.25s ease;
+            position: relative;
+        }
+
+        .board.is-hovering .module-card:not(.hovered):not(.is-prereq):not(.is-dependent) {
+            opacity: 0.25;
+            transform: scale(0.98);
+        }
+
+        .module-card.hovered {
+            transform: translateY(-4px) scale(1.02);
+            background-color: #3f4f66;
+            border-top: 1px solid var(--htwg-teal);
+            border-right: 1px solid var(--htwg-teal);
+            border-bottom: 1px solid var(--htwg-teal);
+            box-shadow: 0 12px 20px -5px var(--htwg-teal-glow);
+            z-index: 10;
+        }
+
+        .module-card.is-prereq {
+            border-left-color: #f59e0b;
+            background-color: rgba(245, 158, 11, 0.15);
+            border-top: 1px solid #f59e0b;
+            border-right: 1px solid #f59e0b;
+            border-bottom: 1px solid #f59e0b;
+            box-shadow: 0 0 15px rgba(245, 158, 11, 0.3);
+            z-index: 5;
+        }
         
-        .module-card.passed { border-left-color: #22c55e; background-image: linear-gradient(to right, rgba(34, 197, 94, 0.1), transparent); }
-        .module-card.passed .mod-id { background: rgba(34, 197, 94, 0.2); color: #4ade80; }
+        .module-card.is-dependent {
+            border-left-color: #a855f7;
+            background-color: rgba(168, 85, 247, 0.15);
+            border-top: 1px solid #a855f7;
+            border-right: 1px solid #a855f7;
+            border-bottom: 1px solid #a855f7;
+            box-shadow: 0 0 15px rgba(168, 85, 247, 0.3);
+            z-index: 5;
+        }
+
+        .module-card.passed {
+            border-left-color: #22c55e;
+            background-image: linear-gradient(to right, rgba(34, 197, 94, 0.1), transparent);
+        }
         
-        .grade-badge { position: absolute; top: 18px; right: 18px; background: #0f172a; border: 1px solid #22c55e; color: #4ade80; font-weight: bold; font-size: 12px; padding: 4px 8px; border-radius: 6px; }
+        .module-card.passed .mod-id {
+            background: rgba(34, 197, 94, 0.2);
+            color: #4ade80;
+        }
 
-        .mod-id { font-size: 12px; font-weight: 700; margin-bottom: 12px; display: inline-block; background: var(--htwg-teal-light); padding: 4px 10px; border-radius: 6px; color: var(--htwg-teal); }
-        .mod-title { font-size: 15px; font-weight: 600; margin: 0 0 12px 0; line-height: 1.4; }
+        /* NEU: Noten-Badge auf der Modulkarte */
+        .grade-badge {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            background: #0f172a;
+            border: 1px solid #22c55e;
+            color: #4ade80;
+            font-weight: bold;
+            font-size: 12px;
+            padding: 4px 8px;
+            border-radius: 6px;
+        }
 
-        /* Modals */
-        .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(5px); z-index: 1000; justify-content: center; align-items: center; }
-        .modal-content { background: var(--modal-bg); width: 90%; max-width: 850px; max-height: 90vh; display: flex; flex-direction: column; border-radius: 16px; border: 1px solid var(--border-color); }
+        .mod-id {
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            display: inline-block;
+            background: var(--htwg-teal-light);
+            padding: 4px 10px;
+            border-radius: 6px;
+            color: var(--htwg-teal);
+            letter-spacing: 0.5px;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .mod-title {
+            font-size: 15px;
+            font-weight: 600;
+            margin: 0 0 12px 0;
+            line-height: 1.4;
+            color: var(--text-main);
+        }
+
+        .mod-info {
+            font-size: 13px;
+            color: var(--text-muted);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: var(--modal-bg);
+            width: 90%;
+            max-width: 850px;
+            height: 90vh; 
+            display: flex;
+            flex-direction: column;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* NEU: Login Modal Spezifisch */
+        .login-box {
+            max-width: 450px;
+            height: auto;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .login-input {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            background: rgba(0,0,0,0.3);
+            color: white;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+
+        .login-input:focus {
+            border-color: var(--htwg-teal);
+            outline: none;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 14px;
+            background: var(--htwg-teal);
+            color: #000;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 15px;
+            transition: 0.2s;
+        }
         
-        .modal-header { padding: 25px; border-bottom: 2px solid var(--htwg-teal); display: flex; justify-content: space-between; align-items: center; }
-        .modal-body { padding: 30px; overflow-y: auto; line-height: 1.7; font-size: 15px; color: var(--text-muted); }
-        .close-btn { background: none; border: none; color: white; font-size: 28px; cursor: pointer; }
-
-        /* Login Modal specific */
-        .login-box { max-width: 400px; padding: 40px; text-align: center; }
-        .login-input { width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 8px; border: 1px solid var(--border-color); background: rgba(0,0,0,0.3); color: white; box-sizing: border-box; }
-        .login-btn { width: 100%; padding: 12px; background: var(--htwg-teal); color: #000; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; margin-bottom: 10px; }
         .login-btn:hover { background: #109888; }
         .toggle-link { color: var(--htwg-teal); font-size: 13px; cursor: pointer; text-decoration: underline; }
+        
+        .export-area {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
 
-        /* Grade Input */
-        .action-area { display: flex; gap: 15px; margin-bottom: 25px; background: rgba(0,0,0,0.2); padding: 15px; border-radius: 10px; border: 1px solid var(--border-color); align-items: center;}
-        .pass-btn { flex: 1; padding: 12px; border-radius: 8px; font-weight: 600; cursor: pointer; border: 1px solid #22c55e; background: rgba(34, 197, 94, 0.1); color: #4ade80; }
-        .pass-btn.is-passed { background: #22c55e; color: #000; }
-        .grade-input-wrapper { display: none; flex-direction: column; width: 120px; }
-        .grade-input-wrapper label { font-size: 12px; color: var(--htwg-teal); margin-bottom: 4px; font-weight: bold; }
-        .grade-input { padding: 10px; border-radius: 6px; border: 1px solid var(--border-color); background: var(--bg-color); color: white; width: 100%; box-sizing: border-box; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px) scale(0.98); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
 
+        .modal-header {
+            background-color: var(--col-bg);
+            color: var(--text-main);
+            padding: 25px;
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+            border-bottom: 2px solid var(--htwg-teal);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .modal-header h2 { margin: 0; font-size: 22px; line-height: 1.3; font-weight: 700; }
+        
+        .close-btn { 
+            background: rgba(255,255,255,0.05); 
+            border: 1px solid var(--border-color);
+            color: var(--text-muted); 
+            font-size: 24px; 
+            cursor: pointer; 
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.2s;
+            flex-shrink: 0;
+            margin-left: 20px;
+        }
+        
+        .close-btn:hover {
+            background: var(--htwg-teal);
+            color: #000;
+            border-color: var(--htwg-teal);
+            transform: rotate(90deg);
+        }
+
+        .modal-body {
+            padding: 30px;
+            overflow-y: auto;
+            line-height: 1.7;
+            font-size: 15px;
+            color: var(--text-muted);
+        }
+
+        /* NEU: Interaktive Aktionsfläche im Modal */
+        .action-area {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+            background: rgba(0,0,0,0.2);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .pass-btn {
+            flex: 1;
+            padding: 14px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            border: 1px solid #22c55e;
+            background: rgba(34, 197, 94, 0.1);
+            color: #4ade80;
+            transition: all 0.2s;
+        }
+
+        .pass-btn:hover { background: rgba(34, 197, 94, 0.2); }
+
+        .pass-btn.is-passed {
+            background: #22c55e;
+            color: #000;
+            border-color: #22c55e;
+        }
+        .pass-btn.is-passed:hover { background: #16a34a; }
+
+        .grade-input-wrapper {
+            display: none; /* Wird via JS eingeblendet */
+            flex-direction: column;
+            width: 140px;
+        }
+
+        .grade-input-wrapper label {
+            font-size: 12px;
+            color: var(--htwg-teal);
+            margin-bottom: 4px;
+            font-weight: bold;
+        }
+
+        .grade-input {
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            background: var(--bg-color);
+            color: white;
+            width: 100%;
+            box-sizing: border-box;
+            font-family: inherit;
+            font-size: 15px;
+        }
+
+        .grade-input:focus { border-color: var(--htwg-teal); outline: none; }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+
+        .info-grid div span { font-weight: 600; color: var(--htwg-teal); }
+        .info-grid div span:last-child { color: var(--text-main); font-weight: 400 !important; }
+
+        .section-title {
+            color: var(--htwg-teal);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+
+        .modal-body ul { margin-top: 8px; padding-left: 25px; }
+        .modal-body li { margin-bottom: 6px; }
+        .modal-body b { color: var(--text-main); font-weight: 600; }
+        
+        .teilmodul-box {
+            margin-bottom: 20px; 
+            padding: 20px; 
+            background: rgba(0, 0, 0, 0.15); 
+            border-left: 4px solid var(--htwg-teal);
+            border-top: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            border-radius: 0 8px 8px 0;
+            transition: background 0.2s;
+        }
+
+        .teilmodul-box:hover {
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .teilmodul-meta {
+            font-size: 13px;
+            color: var(--text-dim);
+            margin-top: 5px;
+            margin-bottom: 12px;
+            display: block;
+            font-family: monospace;
+        }
+
+        ::-webkit-scrollbar { width: 10px; height: 10px; }
+        ::-webkit-scrollbar-track { background: var(--bg-color); border-radius: 5px; }
+        ::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 5px; border: 2px solid var(--bg-color); }
+        ::-webkit-scrollbar-thumb:hover { background: var(--htwg-teal); border-color: var(--bg-color); }
+
+        @media (max-width: 768px) {
+            .info-grid { grid-template-columns: 1fr; }
+            .board { padding: 20px; }
+            .controls { flex-direction: column; width: 100%; }
+            .search-box { width: 90%; }
+            .user-panel { position: static; justify-content: center; margin-bottom: 15px; flex-wrap: wrap; }
+            .action-area { flex-direction: column; align-items: stretch; }
+            .grade-input-wrapper { width: 100%; }
+        }
+
+        .legend-btn {
+            position: absolute;
+            top: 25px;
+            right: 40px;
+            background: var(--htwg-teal);
+            color: var(--bg-color);
+            border: none;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Times New Roman', serif;
+            font-style: italic;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(20, 184, 166, 0.4);
+            transition: all 0.2s ease;
+            z-index: 101;
+        }
+
+        .legend-btn:hover {
+            transform: scale(1.1);
+            background: #109888;
+        }
+
+        .legend-grid {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 10px 20px;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            font-size: 14px;
+        }
+        
+        .legend-grid strong {
+            color: var(--htwg-teal);
+            font-family: monospace;
+            font-size: 15px;
+        }
+        
+        .color-dot {
+            display: inline-block;
+            width: 12px; height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        .color-orange { background: #f59e0b; box-shadow: 0 0 5px #f59e0b; }
+        .color-purple { background: #a855f7; box-shadow: 0 0 5px #a855f7; }
+        .color-green { background: #22c55e; box-shadow: 0 0 5px #22c55e; }
+
+        @media (max-width: 768px) {
+            .legend-btn { right: 20px; width: 30px; height: 30px; font-size: 16px; top: 15px; }
+        }
     </style>
 </head>
 <body>
 
     <header>
+        <!-- NEU: User Panel -->
         <div class="user-panel" id="user-panel" style="display:none;">
             <span class="user-badge" id="current-username">User</span>
             <button class="btn-small" onclick="logout()">Logout</button>
-            <button class="btn-small" onclick="exportData()">💾 Backup laden</button>
-            <button class="btn-small" onclick="document.getElementById('import-file').click()">📂 Backup einspielen</button>
+            <button class="btn-small" onclick="exportData(false)">export</button>
+            <button class="btn-small" onclick="document.getElementById('import-file').click()">import</button>
             <input type="file" id="import-file" style="display:none;" accept=".json" onchange="importData(event)">
         </div>
 
-        <h1>Studienverlauf Maschinenbau (MAB)</h1>
-        <p>HTWG Konstanz | Nach SPO Nr. 2</p>
+        <h1>Modulhandbuch MAB </h1>
+        <p>HTWG Konstanz | Nach SPO Nr. 2 (Gültig ab WS 2026/2027)</p>
+        <div class="timestamp">Zuletzt aktualisiert am: 24.07.2026</div>
+        
+        <div class="disclaimer">
+            <strong>Wichtiger Hinweis:</strong> Dieses Tool ist ein inoffizielles Studentenprojekt. Es besteht kein Anspruch auf Richtigkeit. Rechtlich bindend ist ausschließlich das offizielle Modulhandbuch der HTWG Konstanz (Stand: 30.04.2026).
+        </div>
 
         <div class="controls">
             <input type="text" id="search-input" class="search-box" placeholder="Suche (Titel, Prof, Kürzel)...">
-            <button class="filter-btn active" data-filter="ALL">Alle</button>
-            <button class="filter-btn" data-filter="PM">Pflicht (PM)</button>
-            <button class="filter-btn" data-filter="WPM">Wahlpflicht (WPM)</button>
+            <button class="filter-btn active" data-filter="ALL">Alle Module</button>
+            <button class="filter-btn" data-filter="PM">Nur PM (Pflicht)</button>
+            <button class="filter-btn" data-filter="WPM">Nur WPM (Wahl)</button>
         </div>
+
+        <button class="legend-btn" id="open-legend" title="Legende / Abkürzungen">i</button>
     </header>
 
-    <div class="board" id="board"></div>
+    <div class="board" id="board">
+        <!-- Semester Columns werden via JS generiert -->
+    </div>
 
-    <!-- Login Modal -->
+    <!-- NEU: Login Modal -->
     <div class="modal-overlay" id="login-overlay">
         <div class="modal-content login-box">
-            <h2 id="login-title">Login</h2>
-            <p style="font-size:13px; color:var(--text-dim); margin-bottom:20px;">Daten werden lokal im Browser gespeichert.</p>
+            <h2 id="login-title" style="margin-top: 0; margin-bottom: 5px; color: var(--text-main);">Login</h2>
+            <p style="font-size: 13px; color: var(--text-dim); margin-bottom: 25px; line-height: 1.4;">
+                Daten werden lokal im Cache deines Browsers gespeichert. Um deine Daten auf ein anderes Gerät zu übertragen, nutze die JSON Export/Import Funktion.
+            </p>
+            
             <input type="text" id="username" class="login-input" placeholder="Benutzername">
-            <input type="password" id="password" class="login-input" placeholder="Passwort">
+            <input type="password" id="password" class="login-input" placeholder="Passwort (kann bei Registrierung leer bleiben)">
+            
             <button class="login-btn" id="submit-login" onclick="handleAuth()">Einloggen</button>
             <span class="toggle-link" onclick="toggleAuthMode()" id="auth-toggle">Noch keinen Account? Registrieren</span>
-            <div id="auth-error" style="color:#ef4444; font-size:13px; margin-top:10px; display:none;"></div>
+            
+            <div id="auth-error" style="color:#ef4444; font-size:13px; margin-top:10px; display:none; background: rgba(239, 68, 68, 0.1); padding: 8px; border-radius: 5px; border: 1px solid rgba(239, 68, 68, 0.3);"></div>
+            
+            <div class="export-area">
+                <!-- Backup Buttons auch auf Login-Screen verfügbar -->
+                <button class="btn-small" onclick="exportData(true)" title="Lädt die komplette Browser-Datenbank aller User herunter">⬇️ DB Exportieren</button>
+                <button class="btn-small" onclick="document.getElementById('import-file').click()" title="Spielt ein JSON-Backup ein">⬆️ Backup einspielen</button>
+            </div>
         </div>
     </div>
 
-    <!-- Module Modal -->
+    <!-- Modal für Moduldetails -->
     <div class="modal-overlay" id="modal-overlay">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 id="m-title" style="margin:0;">Modultitel</h2>
-                <button class="close-btn" onclick="closeModal()">&times;</button>
+                <h2 id="m-title">Modultitel</h2>
+                <button class="close-btn" id="close-modal">&times;</button>
             </div>
             <div class="modal-body">
                 
-                <!-- Action Area: Pass & Grade -->
+                <!-- NEU: Interaktiver Bereich (Bestanden & Note) -->
                 <div class="action-area">
                     <button id="toggle-pass-btn" class="pass-btn" onclick="togglePass()">Als bestanden markieren</button>
+                    
                     <div class="grade-input-wrapper" id="grade-wrapper">
-                        <label for="mod-grade">Note (z.B. 1.3)</label>
-                        <input type="number" id="mod-grade" class="grade-input" step="0.1" min="1.0" max="5.0" placeholder="-" onchange="saveGrade(this.value)">
+                        <label for="mod-grade">Prüfungsnote</label>
+                        <input type="number" id="mod-grade" class="grade-input" step="0.1" min="1.0" max="5.0" placeholder="(z.B. 1.3)" onchange="saveGrade(this.value)">
                     </div>
                 </div>
 
-                <div style="font-size:14px; background:rgba(0,0,0,0.2); padding:15px; border-radius:8px; margin-bottom:20px;">
-                    <strong style="color:var(--htwg-teal)">Prüfung:</strong> <span id="m-pruefung"></span><br>
-                    <strong style="color:var(--htwg-teal)">ECTS:</strong> <span id="m-ects"></span> | <strong style="color:var(--htwg-teal)">Dozent:</strong> <span id="m-prof"></span>
+                <div class="info-grid">
+                    <div><span>Modul-Koordination:</span> <span id="m-prof" style="font-weight:normal;"></span></div>
+                    <div><span>ECTS-Punkte:</span> <span id="m-ects" style="font-weight:normal;"></span></div>
+                    <div><span>SWS:</span> <span id="m-sws" style="font-weight:normal;"></span></div>
+                    <div><span>Arbeitsaufwand:</span> <span id="m-workload" style="font-weight:normal;"></span></div>
                 </div>
 
-                <h3 style="color:var(--htwg-teal); border-bottom:1px solid var(--border-color); padding-bottom:5px;">Voraussetzungen</h3>
-                <p id="m-voraussetzung" style="font-size:14px;"></p>
+                <div id="m-voraussetzung-container">
+                    <h3 class="section-title">Inhaltliche Teilnahmevoraussetzung & Verwendbarkeit</h3>
+                    <div id="m-voraussetzung"></div>
+                </div>
+
+                <h3 class="section-title">Prüfungsleistungen</h3>
+                <div id="m-pruefung"></div>
+
+                <h3 class="section-title">Lernziele / Kompetenzen</h3>
+                <div id="m-lernziele"></div>
+
+                <h3 class="section-title">Teilmodule & Lehrinhalte</h3>
+                <div id="m-inhalte"></div>
+
+                <h3 class="section-title">Literatur / Medien</h3>
+                <div id="m-literatur"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal für Legende / Abkürzungen -->
+    <div class="modal-overlay" id="legend-overlay">
+        <div class="modal-content" style="max-width: 600px; height: auto; max-height: 90vh;">
+            <div class="modal-header">
+                <h2>Legende & Abkürzungen</h2>
+                <button class="close-btn" id="close-legend">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div style="margin-bottom: 25px; font-size: 14px; background: rgba(0,0,0,0.2); padding: 20px; border-radius: 10px; border: 1px solid var(--border-color);">
+                    <div style="margin-bottom: 10px;"><strong>Interaktive Funktionen:</strong></div>
+                    <div style="margin-bottom: 5px;"><span class="color-dot color-orange"></span> Orange umrandet beim Hovern: <b>Voraussetzung</b> für das Modul</div>
+                    <div style="margin-bottom: 5px;"><span class="color-dot color-purple"></span> Violett umrandet beim Hovern: Modul baut <b>darauf auf</b></div>
+                    <div><span class="color-dot color-green"></span> Grüner Rand & Badge: Im Modul-Popup als <b>"Bestanden"</b> markiert</div>
+                </div>
+
+                <div class="legend-grid">
+                    <strong>SWS</strong> <span>Semesterwochenstunden</span>
+                    <strong>ECTS</strong> <span>European Credit Transfer System</span>
+                    <strong>PM</strong> <span>Pflichtmodul</span>
+                    <strong>WPM</strong> <span>Wahlpflichtmodul</span>
+                    <strong>V / Ü / LÜ</strong> <span>Vorlesung / Übung / Laborübung</span>
+                    <strong>W / P / E</strong> <span>Workshop / Praktikum / Exkursion</span>
+                    <strong>Kx / Mx</strong> <span>Klausur / Mündliche Prüfung (x = Dauer in Minuten)</span>
+                    <strong>R / SP</strong> <span>Referat / sonstige schriftl. oder prakt. Arbeit</span>
+                    <strong>AB / LP</strong> <span>Ausarbeitungen/Berichte / Laborarbeiten</span>
+                    <strong>PR / TE</strong> <span>Präsentation / Testat</span>
+                    <strong>PJ / S / L</strong> <span>Projekt / Studienarbeit / Laborbericht</span>
+                </div>
             </div>
         </div>
     </div>
 
     <script>
-        // === DATEN & STATE ===
+        // === ZUSTANDS-VARIABLEN ===
         let MODULES = {};
         let SEMESTER_STRUKTUR = [];
+        let DEPENDENCY_MAP = {};
         
-        // Multi-User DB im localStorage
+        // Multi-User Logik via localStorage
         let usersDB = JSON.parse(localStorage.getItem('mab_usersDB')) || {};
-        let currentUser = null; // Aktuell eingeloggter User
-        
+        let currentUser = sessionStorage.getItem('mab_activeUser') || null;
+        let isRegisterMode = false;
+
         let currentSearch = "";
         let currentFilter = "ALL";
         let currentModalId = null;
-        let isRegisterMode = false;
 
-        // === INIT ===
+        // === HILFSFUNKTIONEN ===
+        function getPrereqs(id) { return DEPENDENCY_MAP[id] || []; }
+        function getDependents(id) {
+            let deps = [];
+            for(let key in DEPENDENCY_MAP) {
+                if(DEPENDENCY_MAP[key].includes(id)) deps.push(key);
+            }
+            return deps;
+        }
+
+        // === DATEN LADEN (INIT) ===
         async function init() {
             try {
                 const response = await fetch('module.json');
+                if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+                
                 const data = await response.json();
+                
                 MODULES = data.MODULES;
                 SEMESTER_STRUKTUR = data.SEMESTER_STRUKTUR;
+                DEPENDENCY_MAP = data.DEPENDENCY_MAP;
                 
-                checkLoginStatus();
+                checkLoginStatus(); // Prüft, ob jemand eingeloggt ist, und rendert dann
             } catch (error) {
-                document.getElementById('board').innerHTML = `<h2 style="color:red; text-align:center;">Fehler: module.json nicht gefunden! (Läuft die Seite über einen Server?)</h2>`;
+                console.error("Daten konnten nicht geladen werden:", error);
+                document.getElementById('board').innerHTML = `
+                    <div style="color: #fca5a5; background: rgba(239, 68, 68, 0.1); padding: 25px; border-radius: 8px; margin: 40px auto; max-width: 700px; border: 1px solid rgba(239, 68, 68, 0.3); text-align: center;">
+                        <h2 style="margin-top:0;">⚠️ Fehler beim Laden der Moduldaten</h2>
+                        <p>Die Datei <code>module.json</code> konnte nicht geladen werden.</p>
+                        <p><strong>Ursache:</strong> Wahrscheinlich hast du die HTML-Datei lokal per Doppelklick geöffnet (die URL beginnt mit <code>file://</code>). Browser blockieren aus Sicherheitsgründen das asynchrone Laden lokaler Dateien.</p>
+                        <p><strong>Lösung:</strong> Nutze einen lokalen Webserver (z. B. die VS Code Erweiterung <em>"Live Server"</em>) oder lade die Dateien auf einen Server (z. B. GitHub Pages) hoch.</p>
+                    </div>`;
             }
         }
 
         // === AUTHENTIFIZIERUNG ===
         function checkLoginStatus() {
-            const savedUser = sessionStorage.getItem('mab_activeUser');
-            if(savedUser && usersDB[savedUser]) {
-                currentUser = savedUser;
+            if(currentUser && usersDB[currentUser]) {
+                // User ist valide eingeloggt
                 document.getElementById('login-overlay').style.display = 'none';
                 document.getElementById('user-panel').style.display = 'flex';
                 document.getElementById('current-username').innerText = currentUser;
                 renderBoard();
             } else {
+                // Kein valider Login
                 document.getElementById('login-overlay').style.display = 'flex';
             }
         }
@@ -204,7 +849,7 @@
         function toggleAuthMode() {
             isRegisterMode = !isRegisterMode;
             document.getElementById('login-title').innerText = isRegisterMode ? "Registrieren" : "Login";
-            document.getElementById('submit-login').innerText = isRegisterMode ? "Account erstellen" : "Einloggen";
+            document.getElementById('submit-login').innerText = isRegisterMode ? "Account lokal erstellen" : "Einloggen";
             document.getElementById('auth-toggle').innerText = isRegisterMode ? "Bereits einen Account? Einloggen" : "Noch keinen Account? Registrieren";
             document.getElementById('auth-error').style.display = 'none';
         }
@@ -214,19 +859,21 @@
             const p = document.getElementById('password').value.trim();
             const err = document.getElementById('auth-error');
 
-            if(!u || !p) { err.innerText = "Bitte Felder ausfüllen!"; err.style.display = 'block'; return; }
+            if(!u) { err.innerText = "Bitte einen Benutzernamen eingeben!"; err.style.display = 'block'; return; }
 
             if(isRegisterMode) {
-                if(usersDB[u]) { err.innerText = "Benutzername existiert bereits!"; err.style.display = 'block'; return; }
-                // Neuen User anlegen
+                if(usersDB[u]) { err.innerText = "Dieser Benutzername existiert lokal bereits!"; err.style.display = 'block'; return; }
+                // Neuen User anlegen (Struktur mit passed array und grades object)
                 usersDB[u] = { password: p, passed: [], grades: {} };
                 saveDB();
             } else {
-                if(!usersDB[u] || usersDB[u].password !== p) { err.innerText = "Falscher Name oder Passwort!"; err.style.display = 'block'; return; }
+                if(!usersDB[u]) { err.innerText = "Benutzer nicht gefunden!"; err.style.display = 'block'; return; }
+                if(usersDB[u].password !== p) { err.innerText = "Falsches Passwort!"; err.style.display = 'block'; return; }
             }
 
             // Login erfolgreich
             sessionStorage.setItem('mab_activeUser', u);
+            currentUser = u;
             document.getElementById('password').value = "";
             checkLoginStatus();
         }
@@ -235,8 +882,8 @@
             sessionStorage.removeItem('mab_activeUser');
             currentUser = null;
             document.getElementById('user-panel').style.display = 'none';
-            document.getElementById('board').innerHTML = '';
-            document.getElementById('login-overlay').style.display = 'flex';
+            document.getElementById('board').innerHTML = ''; // Board leeren
+            document.getElementById('login-overlay').style.display = 'flex'; // Modal wieder zeigen
         }
 
         function saveDB() {
@@ -244,54 +891,123 @@
         }
 
         // === JSON EXPORT / IMPORT ===
-        function exportData() {
-            if(!currentUser) return;
-            const userData = usersDB[currentUser];
-            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(userData, null, 2));
-            const dlAnchorElem = document.createElement('a');
-            dlAnchorElem.setAttribute("href", dataStr);
-            dlAnchorElem.setAttribute("download", `mab_backup_${currentUser}.json`);
-            dlAnchorElem.click();
+        function exportData(exportAllDB = false) {
+            let dataObj;
+            let filename;
+            
+            if(exportAllDB) {
+                dataObj = { is_mab_full_db: true, db: usersDB };
+                filename = "mab_complete_backup.json";
+            } else {
+                if(!currentUser) return;
+                dataObj = usersDB[currentUser];
+                dataObj.exported_username = currentUser; // Um es beim Import zuordnen zu können
+                filename = `mab_backup_${currentUser}.json`;
+            }
+
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(dataObj, null, 2));
+            const a = document.createElement('a');
+            a.setAttribute("href", dataStr);
+            a.setAttribute("download", filename);
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
         }
 
         function importData(event) {
             const file = event.target.files[0];
-            if(!file || !currentUser) return;
+            if(!file) return;
 
             const reader = new FileReader();
             reader.onload = function(e) {
                 try {
-                    const importedData = JSON.parse(e.target.result);
-                    if(importedData.passed && importedData.grades) {
-                        usersDB[currentUser].passed = importedData.passed;
-                        usersDB[currentUser].grades = importedData.grades;
-                        saveDB();
-                        renderBoard();
-                        alert("Backup erfolgreich geladen!");
-                    } else { alert("Ungültige Backup-Datei."); }
-                } catch(err) { alert("Fehler beim Lesen der Datei."); }
+                    const data = JSON.parse(e.target.result);
+                    
+                    // Fall 1: Komplette Datenbank wird importiert
+                    if (data.is_mab_full_db && data.db) {
+                        if(confirm("Möchtest du die gesamte lokale Datenbank (alle User) überschreiben?")) {
+                            usersDB = data.db;
+                            saveDB();
+                            alert("Komplette Datenbank erfolgreich wiederhergestellt.");
+                            if(currentUser && !usersDB[currentUser]) logout(); // Falls der aktuelle User nicht im Backup existiert
+                            if(currentUser) renderBoard();
+                        }
+                    } 
+                    // Fall 2: Einzelner User wird importiert
+                    else if (data.passed && typeof data.grades === 'object') {
+                        if(!currentUser) {
+                            // Import vom Login Screen -> Neuen User anlegen
+                            let targetName = data.exported_username || prompt("Unter welchem Benutzernamen soll das Backup gespeichert werden?");
+                            if(targetName) {
+                                if(!usersDB[targetName]) {
+                                    usersDB[targetName] = { password: data.password || "", passed: [], grades: {} };
+                                }
+                                usersDB[targetName].passed = data.passed;
+                                usersDB[targetName].grades = data.grades;
+                                saveDB();
+                                alert(`Backup erfolgreich für User '${targetName}' importiert! Du kannst dich nun einloggen.`);
+                            }
+                        } else {
+                            // Import während man eingeloggt ist -> Überschreibt aktuelle Daten
+                            if(confirm("Dies überschreibt deine aktuellen Noten und Haken. Fortfahren?")) {
+                                usersDB[currentUser].passed = data.passed;
+                                usersDB[currentUser].grades = data.grades;
+                                saveDB();
+                                renderBoard();
+                                alert("Backup in deinem Account wiederhergestellt!");
+                            }
+                        }
+                    } else {
+                        alert("Die Datei hat nicht das richtige Format.");
+                    }
+                } catch(err) { 
+                    alert("Fehler beim Verarbeiten der Datei."); 
+                    console.error(err);
+                }
+                
+                // Reset File Input
+                document.getElementById('import-file').value = "";
             };
             reader.readAsText(file);
         }
 
+        // === EVENT LISTENER FÜR FILTER & SUCHE ===
+        document.getElementById('search-input').addEventListener('input', (e) => {
+            currentSearch = e.target.value.toLowerCase();
+            renderBoard();
+        });
+
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                e.target.classList.add('active');
+                currentFilter = e.target.dataset.filter;
+                renderBoard();
+            });
+        });
+
         // === RENDER LOGIK ===
         function renderBoard() {
-            if(!currentUser) return;
+            if(!currentUser) return; // Sicherheitshalber
+
             const board = document.getElementById('board');
             board.innerHTML = '';
+            
             const userProfile = usersDB[currentUser];
             
             SEMESTER_STRUKTUR.forEach(sem => {
+                let hasVisibleCards = false;
+
                 const col = document.createElement('div');
                 col.className = 'semester-col';
                 
-                // Notendurchschnitt berechnen (ECTS gewichtet)
+                // --- BERECHNUNG NOTENDURCHSCHNITT (ECTS gewichtet) ---
                 let sumGradesECTS = 0;
                 let sumECTS = 0;
 
                 sem.module.forEach(id => {
                     const mod = MODULES[id];
-                    if(userProfile.passed.includes(id) && userProfile.grades[id]) {
+                    if(mod && userProfile.passed.includes(id) && userProfile.grades[id]) {
                         const grade = parseFloat(userProfile.grades[id]);
                         if(!isNaN(grade)) {
                             sumGradesECTS += (grade * mod.ects);
@@ -302,44 +1018,78 @@
 
                 let avgStr = sumECTS > 0 ? (sumGradesECTS / sumECTS).toFixed(2) : "-";
                 
-                col.innerHTML = `
+                // Semester Header
+                let html = `
                     <div class="sem-header">
                         <h2>${sem.titel}</h2>
-                        <span class="avg-badge">Ø Note: ${avgStr}</span>
+                        <span class="avg-badge" title="ECTS-gewichteter Notendurchschnitt dieses Semesters">Ø Note: ${avgStr}</span>
                     </div>
                 `;
+                if(sem.hinweis) html += `<p class="hinweis-text">${sem.hinweis}</p>`;
+                col.innerHTML = html;
 
                 sem.module.forEach(id => {
                     const mod = MODULES[id];
                     if(!mod) return;
 
+                    // FILTER & SUCH LOGIK
                     if(currentFilter === 'PM' && !mod.typ.startsWith('PM')) return;
                     if(currentFilter === 'WPM' && !mod.typ.startsWith('WPM')) return;
-
                     const searchText = `${mod.titel} ${mod.kuerzel} ${mod.koordination}`.toLowerCase();
                     if(currentSearch && !searchText.includes(currentSearch)) return;
+
+                    hasVisibleCards = true;
 
                     const isPassed = userProfile.passed.includes(id);
                     const grade = userProfile.grades[id];
 
                     const card = document.createElement('div');
                     card.className = `module-card ${isPassed ? 'passed' : ''}`;
+                    card.id = `card-${id}`;
                     card.onclick = () => openModal(id);
 
+                    // HOVER LOGIK (Voraussetzungen etc.)
+                    card.onmouseenter = () => {
+                        board.classList.add('is-hovering');
+                        card.classList.add('hovered');
+                        getPrereqs(id).forEach(p => {
+                            const pCard = document.getElementById(`card-${p}`);
+                            if(pCard) pCard.classList.add('is-prereq');
+                        });
+                        getDependents(id).forEach(d => {
+                            const dCard = document.getElementById(`card-${d}`);
+                            if(dCard) dCard.classList.add('is-dependent');
+                        });
+                    };
+
+                    card.onmouseleave = () => {
+                        board.classList.remove('is-hovering');
+                        document.querySelectorAll('.module-card').forEach(c => {
+                            c.classList.remove('hovered', 'is-prereq', 'is-dependent');
+                        });
+                    };
+
+                    // Karte befüllen (Inkl. Noten-Badge falls vorhanden)
                     card.innerHTML = `
                         <span class="mod-id">${mod.kuerzel} | ${mod.ects} ECTS</span>
-                        ${grade ? `<span class="grade-badge">${grade}</span>` : ''}
+                        ${grade ? `<span class="grade-badge" title="Eingetragene Note">${grade}</span>` : ''}
                         <h3 class="mod-title">${mod.titel}</h3>
-                        <div style="font-size:12px; color:var(--text-muted)">${mod.typ} | ${mod.koordination.split(',')[0]}</div>
+                        <div class="mod-info">
+                            <span> ${mod.koordination.split(',')[0]}</span>
+                            <span>${mod.sws > 0 ? mod.sws + ' SWS' : ''}</span>
+                        </div>
                     `;
                     col.appendChild(card);
                 });
 
-                board.appendChild(col);
+                if(hasVisibleCards) board.appendChild(col);
             });
         }
 
-        // === MODAL & INTERAKTION ===
+        // === MODAL LOGIK ===
+        const modal = document.getElementById('modal-overlay');
+        const passBtn = document.getElementById('toggle-pass-btn');
+
         function openModal(id) {
             currentModalId = id;
             const mod = MODULES[id];
@@ -348,72 +1098,119 @@
             document.getElementById('m-title').innerText = `${mod.kuerzel}: ${mod.titel}`;
             document.getElementById('m-prof').innerText = mod.koordination;
             document.getElementById('m-ects').innerText = mod.ects;
-            document.getElementById('m-pruefung').innerText = mod.pruefung.modulpruefung || mod.pruefung.modulteilpruefung || "Keine Prüfung";
-            document.getElementById('m-voraussetzung').innerText = mod.voraussetzung;
+            document.getElementById('m-sws').innerText = mod.sws || '-';
             
-            // Bestanden Button
-            const passBtn = document.getElementById('toggle-pass-btn');
-            if(userProfile.passed.includes(id)) {
-                passBtn.classList.add('is-passed');
-                passBtn.innerText = "✓ Bestanden (Aufheben)";
-            } else {
-                passBtn.classList.remove('is-passed');
-                passBtn.innerText = "Als bestanden markieren";
-            }
-
-            // Noten-Input (Nur anzeigen, wenn es eine Klausur/Mündliche Prüfung etc. gibt - hier vereinfacht: immer zeigen wenn bestanden)
+            // Pass Button State
             const gradeWrapper = document.getElementById('grade-wrapper');
             const gradeInput = document.getElementById('mod-grade');
-            
+
             if(userProfile.passed.includes(id)) {
+                passBtn.classList.add('is-passed');
+                passBtn.innerText = "✓ Bestanden (Klicken zum Aufheben)";
+                
+                // Note Eingabefeld anzeigen
                 gradeWrapper.style.display = 'flex';
                 gradeInput.value = userProfile.grades[id] || "";
             } else {
+                passBtn.classList.remove('is-passed');
+                passBtn.innerText = "Als bestanden markieren";
+                
+                // Note Eingabefeld verstecken
                 gradeWrapper.style.display = 'none';
                 gradeInput.value = "";
             }
+            
+            let workloadStr = mod.aufwand;
+            if(mod.kontaktzeit || mod.selbststudium) workloadStr += ` (Kontakt: ${mod.kontaktzeit || '-'} | Selbst: ${mod.selbststudium || '-'})`;
+            document.getElementById('m-workload').innerText = workloadStr;
+            
+            document.getElementById('m-voraussetzung').innerHTML = `
+                <b>Inhaltliche Teilnahmevoraussetzung:</b> ${mod.voraussetzung}<br>
+                <b>Als Vorkenntnis erforderlich für:</b> ${mod.verwendbarkeit.vorkenntnis}<br>
+                <b>Sinnvoll zu kombinieren mit:</b> ${mod.verwendbarkeit.kombination}
+            `;
+            
+            let prfgHTML = "";
+            if(mod.pruefung.modulpruefung) prfgHTML += `<b>Modulprüfung (MP):</b> ${mod.pruefung.modulpruefung}<br>`;
+            if(mod.pruefung.modulteilpruefung) prfgHTML += `<b>Modulteilprüfung (MTP):</b> ${mod.pruefung.modulteilpruefung}<br>`;
+            if(mod.endnote) prfgHTML += `<b>Endnote:</b> ${mod.endnote}`;
+            document.getElementById('m-pruefung').innerHTML = prfgHTML || "Keine Angaben";
+            
+            let lzHtml = "";
+            if(mod.lernziele && mod.lernziele.length > 0) lzHtml += `<b>Fachliche Kompetenzen (Die Studierenden...):</b><ul>` + mod.lernziele.map(l => `<li>${l}</li>`).join('') + `</ul>`;
+            if(mod.methodischeKompetenzen) {
+                let mk = Array.isArray(mod.methodischeKompetenzen) ? `<ul>` + mod.methodischeKompetenzen.map(l => `<li>${l}</li>`).join('') + `</ul>` : `<p>${mod.methodischeKompetenzen}</p>`;
+                lzHtml += `<b>Methodische Kompetenzen:</b> ${mk}`;
+            }
+            if(mod.personaleKompetenzen) {
+                let pk = Array.isArray(mod.personaleKompetenzen) ? `<ul>` + mod.personaleKompetenzen.map(l => `<li>${l}</li>`).join('') + `</ul>` : `<p>${mod.personaleKompetenzen}</p>`;
+                lzHtml += `<b>Personale Kompetenzen:</b> ${pk}`;
+            }
+            if(mod.kompetenzReihenfolge) lzHtml += `<p><b>Vermittlung (Reihenfolge):</b> Fachkompetenz ${mod.kompetenzReihenfolge.fach || '-'}, Methodenkompetenz ${mod.kompetenzReihenfolge.methode || '-'}, Sozial-/Selbstkompetenz ${mod.kompetenzReihenfolge.sozial || '-'}</p>`;
+            document.getElementById('m-lernziele').innerHTML = lzHtml || "Keine spezifischen Lernziele angegeben.";
 
-            document.getElementById('modal-overlay').style.display = 'flex';
+            let inhalteHtml = "";
+            if(mod.teilmodule && mod.teilmodule.length > 0) {
+                mod.teilmodule.forEach(tm => {
+                    inhalteHtml += `<div class="teilmodul-box">
+                        <b>${tm.name}</b><br>
+                        <span class="teilmodul-meta">Dozent: ${tm.lehrende} | Art: ${tm.art} | ${tm.sws} SWS | ${tm.ects} ECTS</span>
+                        <ul style="margin-top: 5px; margin-bottom: 0;">
+                            ${tm.inhalt.map(i => `<li>${i}</li>`).join('')}
+                        </ul>
+                    </div>`;
+                });
+            }
+            document.getElementById('m-inhalte').innerHTML = inhalteHtml || "Keine Teilmodule angegeben.";
+
+            document.getElementById('m-literatur').innerHTML = (mod.literatur && mod.literatur.length > 0) ? `<ul>` + mod.literatur.map(l => `<li>${l}</li>`).join('') + `</ul>` : "Keine Literatur angegeben.";
+
+            modal.style.display = 'flex';
         }
 
+        // === INTERAKTIONEN IM MODAL ===
         function togglePass() {
             const userProfile = usersDB[currentUser];
+            
             if(userProfile.passed.includes(currentModalId)) {
+                // Modul ent-markieren (Bestanden aufheben)
                 userProfile.passed = userProfile.passed.filter(id => id !== currentModalId);
-                delete userProfile.grades[currentModalId]; // Note löschen, wenn nicht mehr bestanden
+                delete userProfile.grades[currentModalId]; // Löscht auch die Note
             } else {
+                // Modul markieren
                 userProfile.passed.push(currentModalId);
             }
+            
             saveDB();
-            openModal(currentModalId); // Modal refreshen
-            renderBoard(); // Board refreshen für Notendurchschnitt
+            openModal(currentModalId); // Re-rendert den Dialog (zeigt/versteckt Notenfeld)
+            renderBoard(); // Re-rendert Board im Hintergrund (für Notenschnitt & Farben)
         }
 
         function saveGrade(val) {
+            // Note speichern, sobald das Input Feld geändert wird
             if(val && val >= 1.0 && val <= 5.0) {
                 usersDB[currentUser].grades[currentModalId] = parseFloat(val).toFixed(1);
             } else {
                 delete usersDB[currentUser].grades[currentModalId];
             }
             saveDB();
-            renderBoard();
+            renderBoard(); // Updated den Notenschnitt sofort
         }
 
-        function closeModal() { document.getElementById('modal-overlay').style.display = 'none'; }
+        document.getElementById('close-modal').onclick = () => { modal.style.display = 'none'; }
 
-        // Filter / Search Events
-        document.getElementById('search-input').addEventListener('input', (e) => { currentSearch = e.target.value.toLowerCase(); renderBoard(); });
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-                e.target.classList.add('active');
-                currentFilter = e.target.dataset.filter;
-                renderBoard();
-            });
-        });
+        // --- Legenden Logik ---
+        const legendModal = document.getElementById('legend-overlay');
+        document.getElementById('open-legend').onclick = () => { legendModal.style.display = 'flex'; }
+        document.getElementById('close-legend').onclick = () => { legendModal.style.display = 'none'; }
 
-        window.onclick = (e) => { if(e.target === document.getElementById('modal-overlay')) closeModal(); }
+        // Click-Outside
+        window.onclick = (e) => {
+            if(e.target === modal) modal.style.display = 'none';
+            if(e.target === legendModal) legendModal.style.display = 'none';
+        }
 
+        // === START ===
         init();
     </script>
 </body>
