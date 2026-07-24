@@ -12,10 +12,10 @@
       "sws": 5,
       "kontaktzeit": "75 h",
       "selbststudium": "75 h",
-      "voraussetzung": "keine",
+      "voraussetzung": "—",
       "verwendbarkeit": {
         "vorkenntnis": "Fördert den Erfolg in allen anderen Modulen",
-        "kombination": "keine"
+        "kombination": "—"
       },
       "pruefung": {
         "modulpruefung": "",
@@ -2613,7 +2613,7 @@
     "m21": ["m8", "m16"],
     "m22": ["m2", "m7", "m9", "m15"],
     "m23": ["m2", "m7", "m13", "m20"],
-    "m24": ["m16", "m20", "m7", "m13"],
+    "m24": ["m16", "m7", "m13"],
     "m25": ["m19"],
     "m26-me": ["m15", "m9"],
     "m28": ["m1", "m2", "m3", "m4", "m5", "m6", "m7", "m8", "m9", "m10", "m11", "m12", "m13", "m14", "m15", "m16", "m17", "m18"],
