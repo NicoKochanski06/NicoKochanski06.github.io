@@ -644,6 +644,25 @@
         @media (max-width: 768px) {
             .legend-btn { right: 20px; width: 30px; height: 30px; font-size: 16px; top: 15px; }
         }
+        /* Styling für das Textfeld */
+    .disclaimer {
+        padding: 10px;
+        background-color: hsl(0, 55%, 35%);
+        font-family: sans-serif;
+    }
+
+    /* 1. Standardfarbe des Links im Disclaimer (z. B. HTWG-Blau) */
+    .disclaimer a:link, 
+    .disclaimer a:visited {
+        color: hsl(205, 29%, 80%); 
+        text-decoration: underline; /* Unterstrichen lassen für bessere Erkennbarkeit */
+    }
+
+    /* 2. Farbe, wenn man mit der Maus darüberfährt (z. B. Dunkelrot) */
+    .disclaimer a:hover {
+        color: hsl(0, 30%, 96%);
+        text-decoration: none; /* Unterstreichung verschwindet beim Hover */
+         }
     </style>
 </head>
 <body>
@@ -663,7 +682,9 @@
         <div class="timestamp">Zuletzt aktualisiert am: 24.07.2026</div>
         
         <div class="disclaimer">
-            <strong>Wichtiger Hinweis:</strong> Dieses Tool ist ein inoffizielles Studentenprojekt. Es besteht kein Anspruch auf Richtigkeit. Rechtlich bindend ist ausschließlich das offizielle Modulhandbuch der HTWG Konstanz (Stand: 30.04.2026).
+            <strong>Wichtiger Hinweis:</strong> Dieses Tool ist ein inoffizielles Studentenprojekt. Es besteht kein Anspruch auf Richtigkeit. Rechtlich bindend ist ausschließlich das offizielle Modulhandbuch der HTWG Konstanz: <br>
+            <a href="https://www.htwg-konstanz.de/hochschule/fakultaeten/maschinenbau/studieninteressierte/modulhandbuecher" target="_blank">https://www.htwg-konstanz.de/hochschule/fakultaeten/maschinenbau/studieninteressierte/modulhandbuecher</a> <br>
+            (Stand: 30.04.2026)
         </div>
 
         <div class="controls">
