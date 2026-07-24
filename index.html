@@ -41,8 +41,14 @@
             padding: 25px 40px;
             text-align: center;
             border-bottom: 1px solid var(--border-color);
-            position: sticky;
+            
+            /* GEÄNDERT: fixed statt sticky + width: 100% */
+            position: fixed;
             top: 0;
+            left: 0;
+            width: 100%;
+            box-sizing: border-box; /* Verhindert, dass das Padding die Seite breiter macht */
+            
             z-index: 100;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
@@ -166,7 +172,10 @@
         .board {
             display: flex;
             overflow-x: auto;
-            padding: 30px 40px;
+            
+            /* Wir setzen oben 0, das JavaScript übernimmt gleich die exakte Berechnung */
+            padding: 0px 40px 50vh 40px; 
+            
             gap: 25px;
             align-items: flex-start;
             min-height: calc(100vh - 120px);
@@ -578,7 +587,10 @@
 
         @media (max-width: 768px) {
             .info-grid { grid-template-columns: 1fr; }
-            .board { padding: 20px; }
+            
+            /* GEÄNDERT: Auch auf dem Handy oben Platz für den Header lassen */
+            .board { padding: 250px 20px 50vh 20px; } 
+            
             .controls { flex-direction: column; width: 100%; }
             .search-box { width: 90%; }
             .user-panel { position: static; justify-content: center; margin-bottom: 15px; flex-wrap: wrap; }
@@ -663,6 +675,52 @@
         color: hsl(0, 30%, 96%);
         text-decoration: none; /* Unterstreichung verschwindet beim Hover */
          }
+    /* --- DYNAMISCHER HEADER (SHRINK BEIM SCROLLEN) --- */
+        
+        /* 1. Ausgangszustand definieren (wichtig für softe max-height Animation) */
+        header, header h1, header p, .timestamp, .disclaimer, .controls {
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1); /* Geschmeidige Kurve */
+        }
+
+        header h1, header p, .timestamp, .disclaimer {
+            max-height: 200px; /* Muss gesetzt sein, damit max-height: 0 animiert wird */
+            opacity: 1;
+            overflow: hidden;
+        }
+
+        .user-panel, .legend-btn {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        /* 2. Zustand wenn geschrumpft */
+        header.shrunk {
+            padding: 12px 40px; 
+            background-color: rgba(15, 23, 42, 0.95); /* Etwas dunkler beim Scrollen */
+        }
+
+        header.shrunk h1, 
+        header.shrunk p, 
+        header.shrunk .timestamp, 
+        header.shrunk .disclaimer {
+            max-height: 0;
+            opacity: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+            border: none;
+        }
+
+        header.shrunk .user-panel,
+        header.shrunk .legend-btn {
+            opacity: 0;
+            pointer-events: none;
+            transform: scale(0.9);
+        }
+
+        header.shrunk .controls {
+            margin-top: 0; 
+        }
     </style>
 </head>
 <body>
@@ -1230,7 +1288,37 @@
             if(e.target === modal) modal.style.display = 'none';
             if(e.target === legendModal) legendModal.style.display = 'none';
         }
+   // === DYNAMISCHER HEADER BEIM SCROLLEN (Anti-Glitch) ===
+        let isShrunk = false;
+        
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            
+            // Abwärts: Erst ab 120px einklappen
+            if (window.scrollY > 120 && !isShrunk) {
+                header.classList.add('shrunk');
+                isShrunk = true;
+            } 
+            // Aufwärts: Erst wieder ausklappen, wenn man fast ganz oben ist (< 30px)
+            else if (window.scrollY < 30 && isShrunk) {
+                header.classList.remove('shrunk');
+                isShrunk = false;
+            }
+        });
+    // === DYNAMISCHER ABSTAND FÜR DEN FIXED HEADER ===
+        const headerEl = document.querySelector('header');
+        const boardEl = document.getElementById('board');
 
+        // Ein ResizeObserver überwacht den Header vollautomatisch.
+        // Egal ob der Text umbricht oder Sie das Fenster kleiner ziehen: Er misst immer exakt!
+        new ResizeObserver(() => {
+            // Wir passen den Abstand nur an, wenn der Header ausgeklappt ist.
+            // (Das verhindert, dass das Board beim Scrollen nach oben springt)
+            if (!headerEl.classList.contains('shrunk')) {
+                // Header-Höhe + 30px extra Luft zum Atmen
+                boardEl.style.paddingTop = (headerEl.offsetHeight + 30) + 'px';
+            }
+        }).observe(headerEl);    
         // === START ===
         init();
     </script>
